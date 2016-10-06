@@ -1,0 +1,27 @@
+<Alloy>
+	<Window id="homeWin" exitOnClose="true" layout="vertical" height="100%" width="100%">
+		<View layout="vertical" height="20%">
+			<Label>Welcome username</Label>
+		</View>
+		<ScrollableView id="scrView" showPagingControl="true" height="70%">
+			<View backgroundColor="purple"></View>
+			<View backgroundColor="black"></View>
+			<View backgroundColor="blue"></View>
+			<View backgroundColor="red"></View>
+		</ScrollableView>
+		<View id="pagging" height="10%" width="Ti.UI.SIZE" layout="horizontal">
+			<View id="p1" width="24.9%" height="Titanium.UI.FILL" backgroundColor="gray">
+				<Label>View Tasks</Label>
+			</View>
+			<View id="p2" width="24.9%" height="Titanium.UI.FILL" backgroundColor="gray">
+				<Label>X-RAY</Label>
+			</View>
+			<View id="p3" width="24.9%" height="Titanium.UI.FILL" backgroundColor="gray">
+				<Label>DoomsDay</Label>
+			</View>
+			<View id="p4" width="24.9%" height="Titanium.UI.FILL" backgroundColor="gray">
+				<Label>Nuggets</Label>
+			</View>
+		</View>
+	</Window>
+</Alloy>

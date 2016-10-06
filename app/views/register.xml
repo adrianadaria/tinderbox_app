@@ -1,0 +1,11 @@
+<Alloy>
+	<View id="view">
+		<Label>- Register Here -</Label>
+		<TextField class="name" id="first"></TextField>
+		<TextField class="name" id="last"></TextField>
+		<TextField class="pass" id="pw"></TextField>
+		<TextField class="pass" id="pw2"></TextField>
+		<TextField id="email"></TextField>
+		<Button id="register" onClick="createUser">Register</Button>
+	</View>
+</Alloy>

@@ -1,0 +1,56 @@
+"#logWin": {
+	backgroundColor:"purple",
+	width: '100%',
+	height: '100%'
+}
+
+"#logView": {
+	top: '25%',
+	layout: 'vertical',
+	width: '100%',
+	height: '100%'
+}
+
+"TextField": {
+	width:'70%', 
+	height:'40dp',
+	hintTextColor: '#888844',
+	backgroundColor: "white",
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	borderRadius: '10dp',
+	color: "#001133",
+	borderColor: '#ff0000',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
+"#username": {
+	keyboardType: Ti.UI.KEYBOARD_DEFAULT,
+	returnKeyType: Ti.UI.KEYBOARD_DEFAULT,
+	autocorrect: true,
+	hintText: 'username'
+}
+
+"#password": {
+	top: '20dp',
+	hintText:"password",
+	passwordMask: true,
+	autocorrect: false,
+}
+
+"#login": {
+	top: '50dp',
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	borderRadius: '10dp',
+	backgroundColor: "#1a0000",
+	color: 'white',
+	width: '40%'
+}
+
+"#btnReg": {
+	top: '10dp',
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	borderRadius: '10dp',
+	backgroundColor: "#1a0000",
+	color: 'white',
+	width: '40%'
+}

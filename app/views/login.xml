@@ -1,0 +1,10 @@
+<Alloy>
+	<Window id="logWin" exitOnClose="true">
+		<View id="logView">
+			<TextField id="username"></TextField>
+			<TextField id="password"></TextField>
+			<Button id="login" onClick="login">Login</Button>
+			<Button id="btnReg" onClick="register">SignUp</Button>
+		</View>
+	</Window>
+</Alloy>
