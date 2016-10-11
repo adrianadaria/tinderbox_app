@@ -4,3 +4,13 @@ var args = $.args;
 function createUser(e) {
 	
 }
+
+
+function uploadImage(e) {
+	
+}
+
+
+function outputState(){
+    Ti.API.info('Switch value: ' + $.basicSwitch.value);
+}
