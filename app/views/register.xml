@@ -1,11 +1,70 @@
 <Alloy>
-	<View id="view">
-		<Label>- Register Here -</Label>
-		<TextField class="name" id="first"></TextField>
-		<TextField class="name" id="last"></TextField>
-		<TextField class="pass" id="pw"></TextField>
-		<TextField class="pass" id="pw2"></TextField>
-		<TextField id="email"></TextField>
-		<Button id="register" onClick="createUser">Register</Button>
+	 <ScrollView id="scrollView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="100%" width="100%">
+	<View id="view" height="200%" width="100%" layout="vertical">
+		<ImageView id="logo" class="logo" image="/images/logo.png"/>
+		<Label>Create your account</Label>
+		
+		<Label>Details for login</Label>
+		<TextField class="emailfield" id="email" hintText="email"></TextField>
+		<TextField class="name" id="password" hintText="password" passwordMask="true"></TextField>
+		<TextField class="name" id="password" hintText="repeat password" passwordMask="true"></TextField>
+		
+		
+		<Label>Personal information</Label>
+		<TextField class="name" id="fullname" hintText="fullname"></TextField>
+		<TextField class="name" id="birthday" hintText="birthday"></TextField>
+		<TextField class="name" id="gender" hintText="gender"></TextField>
+		<TextField class="name" id="nationality" hintText="nationality"></TextField>
+	    <TextField class="name" id="street" hintText="street"></TextField>
+	    		<TextField class="numberfield" id="phone" hintText="phone"></TextField>
+	   
+		<TextField class="name" id="city" hintText="city" width="40%" layout="horizontal"></TextField>
+		<TextField class="numberfield" id="postcode" hintText="postcode" width="30%" layout="horizontal"></TextField>
+		
+		<TextField class="name" id="country" hintText="country"></TextField>
+		
+		
+		
+		<Label>Do you speak Danish?</Label>
+		
+			
+		<Switch id="basicSwitch" value="true" onChange="outputState" platform="android"/>
+				
+		<Label>Do you speak English?</Label>
+		
+	 <Switch id="basicSwitch" value="true" onChange="outputState" platform="android"/>
+		
+		<Label>When would you like to work?</Label>
+		
+		   <Picker id="picker" top="10" selectionIndicator="true" useSpinner="false" backgroundColor="#043540" width="70%">
+            <PickerColumn id="column1">
+                <PickerRow color="white" title="Before"/>
+                <PickerRow color="white" title="During"/>
+                <PickerRow color="white" title="After"/>
+               
+            </PickerColumn>
+           
+        </Picker>
+        
+        <Label>Choose the available task</Label>
+		
+		   <Picker id="picker" top="10" selectionIndicator="true" useSpinner="false" backgroundColor="#043540" width="70%">
+            <PickerColumn id="column1">
+                <PickerRow color="white" title="Selling tickets"/>
+                <PickerRow color="white" title="Selling beers"/>
+                <PickerRow color="white"  title="Help point"/>
+               
+            </PickerColumn>
+           
+        </Picker>
+		
+		<Label>With who you would like to work?</Label>
+		<TextField class="name" id="workwith" hintText="Write name"></TextField>
+		
+		<Button id="profileImage" onClick="uploadImage">Upload Image</Button>
+	 
+	
+		<Button id="register" onClick="createUser">Sign up</Button>
 	</View>
+	</ScrollView>
 </Alloy>
