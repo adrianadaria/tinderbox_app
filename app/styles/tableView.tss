@@ -1,0 +1,11 @@
+
+".answer" : {
+  color:"black",
+  left:"10dp",
+  height:"100dp",
+  font: {
+		fontSize: 14,
+		fontFamily: 'brown-regular',
+	},
+  
+}
