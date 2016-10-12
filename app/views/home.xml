@@ -47,11 +47,11 @@
 		<Tab title="Messages" icon="">
 			<Window title="Messages" layout="vertical">
 				<ScrollableView height="90%">
-					<View backgroundColor="red">
-						<Label>Sent</Label>
+					<View backgroundColor="#FDF9F4">
+						<Require src="sent"></Require>
 					</View>
-					<View backgroundColor="blue">
-						<Label>Inbox</Label>
+					<View backgroundColor="#FDF9F4">
+						<Require src="inbox"></Require>
 					</View>
 					<View backgroundColor="#FDF9F4">
 						<Require src="createMessage"></Require>

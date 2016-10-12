@@ -1,0 +1,30 @@
+"#inboxView": {
+	backgroundColor: "#FDF9F4"
+}
+
+"Label": {
+	textAlign: 'center',
+	height: Ti.UI.FILL
+}
+
+".label": {
+	color: "#400040"
+}
+
+".labelx": {
+	color: "red"
+}
+
+".row": {
+	backgroundColor: "#cc98e5",
+	height: '60dp',
+	width: '80%',
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	borderRadius: '10dp',
+	borderColor: '#CBCAC9',
+	bottom: '15dp'
+}
+
+"TableView": {
+	separatorStyle: Titanium.UI.TABLE_VIEW_SEPARATOR_STYLE_NONE
+}

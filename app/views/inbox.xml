@@ -1,0 +1,62 @@
+<Alloy>
+	<View id="inboxView" layout="vertical">
+						<TableView id="table" top="40dp">
+							<TableViewRow rowId="inbox1">
+								<View class="row" id="inbox1" layout="horizontal">
+								<Label class="label" width="40%">Morten</Label>
+								<Label class="label" width="50%">brewing beer</Label>
+								<Label class="labelx" width="10%">x</Label>
+								</View>
+							</TableViewRow>
+							<TableViewRow>
+								<View class="row" layout="horizontal" >
+								<Label class="label" width="40%">Jordan</Label>
+								<Label class="label" width="50%">give me shoes</Label>
+								<Label class="labelx" width="10%">x</Label>
+								</View>
+							</TableViewRow>
+							<TableViewRow>
+								<View class="row" layout="horizontal">
+								<Label class="label" width="40%">Ceburashka</Label>
+								<Label class="label" width="50%">about name</Label>
+								<Label class="labelx" width="10%">x</Label>
+								</View>
+							</TableViewRow>
+							<TableViewRow>
+								<View class="row" layout="horizontal">
+								<Label class="label" width="40%">Lars</Label>
+								<Label class="label" width="50%">cannot attend</Label>
+								<Label class="labelx" width="10%">x</Label>
+								</View>
+							</TableViewRow>
+							<TableViewRow>
+								<View class="row" layout="horizontal">
+								<Label class="label" width="40%">Michael</Label>
+								<Label class="label" width="50%">about schedule</Label>
+								<Label class="labelx" width="10%">x</Label>
+								</View>
+							</TableViewRow>
+							<TableViewRow>
+								<View class="row" layout="horizontal">
+								<Label class="label" width="40%">Lolipop</Label>
+								<Label class="label" width="50%">whatsup</Label>
+								<Label class="labelx" width="10%">x</Label>
+								</View>
+							</TableViewRow>
+							<TableViewRow>
+								<View class="row" layout="horizontal">
+								<Label class="label" width="40%">Ultra</Label>
+								<Label class="label" width="50%">cooking cake</Label>
+								<Label class="labelx" width="10%">x</Label>
+								</View>
+							</TableViewRow>
+							<TableViewRow>
+								<View class="row" layout="horizontal">
+								<Label class="label" width="30%">Liza</Label>
+								<Label class="label" width="50%">im done</Label>
+								<Label class="labelx" width="10%">x</Label>
+								</View>
+							</TableViewRow>
+						</TableView>
+					</View>
+</Alloy>

@@ -1,0 +1,11 @@
+<Alloy>
+	<Window id="inbox1win" backgroundColor="white" height="60%" layout="vertical">
+	<View class="container" layout="vertical">
+		<Label color="purple" top="10dp">Subject: Brewing Beer</Label>
+		<Label color="green" top="10dp">Author: Morten</Label>
+		<Label color="brown" top="10dp">Message</Label>
+		<Label color="grey" width="80%" height="50%" top="10dp">almost 2 weeks passed 2 more to go for our awesome beer!</Label>
+		<Button id="closeBtn" top="15dp">Close Window</Button>
+	</View>
+	</Window>
+</Alloy>
