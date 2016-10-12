@@ -1,0 +1,23 @@
+<Alloy>
+	 <ScrollView id="scrollView" height="100%" width="100%">
+	<View id="view" height="Ti.UI.SIZE" width="100%" layout="vertical">
+		
+		<Label>Write message to a group member</Label>
+		
+
+		
+        <TextField class="name" id="to" hintText="To:"></TextField>
+		<TextField class="name" id="subject" hintText="Subject"></TextField>
+	    <TextArea id="message" hintText="Message"></TextArea>
+	  
+	 
+	
+		<Button id="send" onClick="sendMessage">Send</Button>
+
+
+
+	</View>
+		</ScrollView>
+
+</Alloy>
+
