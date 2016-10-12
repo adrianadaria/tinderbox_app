@@ -1,0 +1,14 @@
+".question": {
+	backgroundColor:"#043540",
+	backgroundSelectedColor:"#8BC7B9",
+	color:"white",
+	top: '10dp',
+	height:"60dp",
+	width:"80%",
+	left:"10%",
+	 font: {
+		fontSize: 12,
+		fontFamily: 'eveleth-thin',
+	},
+	
+}
