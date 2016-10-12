@@ -1,8 +1,9 @@
 <Alloy>
 	<Window id="logWin" exitOnClose="true">
 		<View id="logView">
-			<TextField id="username"></TextField>
-			<TextField id="password"></TextField>
+			<ImageView id="logo" class="logo" image="/images/logo.png"/>
+			<TextField id="username" hintText="Your name"></TextField>
+			<TextField id="password" hintText="Password"></TextField>
 			<Button id="login" onClick="login">Login</Button>
 			<Button id="btnReg" onClick="register">SignUp</Button>
 		</View>
