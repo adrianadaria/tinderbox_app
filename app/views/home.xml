@@ -1,27 +1,132 @@
 <Alloy>
-	<Window id="homeWin" exitOnClose="true" layout="vertical" height="100%" width="100%">
-		<View layout="vertical" height="20%">
-			<Label>Welcome username</Label>
-		</View>
-		<ScrollableView id="scrView" showPagingControl="true" height="70%">
-			<View backgroundColor="purple"></View>
-			<View backgroundColor="black"></View>
-			<View backgroundColor="blue"></View>
-			<View backgroundColor="red"></View>
-		</ScrollableView>
-		<View id="pagging" height="10%" width="Ti.UI.SIZE" layout="horizontal">
-			<View id="p1" width="24.9%" height="Titanium.UI.FILL" backgroundColor="gray">
-				<Label>View Tasks</Label>
-			</View>
-			<View id="p2" width="24.9%" height="Titanium.UI.FILL" backgroundColor="gray">
-				<Label>X-RAY</Label>
-			</View>
-			<View id="p3" width="24.9%" height="Titanium.UI.FILL" backgroundColor="gray">
-				<Label>DoomsDay</Label>
-			</View>
-			<View id="p4" width="24.9%" height="Titanium.UI.FILL" backgroundColor="gray">
-				<Label>Nuggets</Label>
-			</View>
-		</View>
-	</Window>
+	<TabGroup>
+		<Tab title="Tab 1" icon="">
+			<Window title="Tab 1" layout="vertical">
+				<ScrollableView height="90%">
+					<View backgroundColor="red">
+						<Label>Label1</Label>
+					</View>
+					<View backgroundColor="blue">
+						<Label>Label2</Label>
+					</View>
+					<View backgroundColor="yellow">
+						<Label>Label3</Label>
+					</View>
+					<View backgroundColor="green">
+						<Label>Label4</Label>
+					</View>
+				</ScrollableView>
+				<View height="10%" layout="horizontal">
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+				</View>
+			</Window>
+		</Tab>
+		<Tab title="Tab 2" icon="">
+			<Window title="Tab 2" layout="vertical">
+				<ScrollableView height="90%">
+					<View backgroundColor="red">
+						<Label>Label5</Label>
+					</View>
+					<View backgroundColor="blue">
+						<Label>Label6</Label>
+					</View>
+					<View backgroundColor="yellow">
+						<Label>Label7</Label>
+					</View>
+					<View backgroundColor="green">
+						<Label>Label8</Label>
+					</View>
+				</ScrollableView>
+				<View height="10%" layout="horizontal">
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+				</View>
+			</Window>
+		</Tab>
+		<Tab title="Tab 3" icon="">
+			<Window title="Tab 3" layout="vertical">
+				<ScrollableView height="90%">
+					<View backgroundColor="red">
+						<Label>Label9</Label>
+					</View>
+					<View backgroundColor="blue">
+						<Label>Label10</Label>
+					</View>
+					<View backgroundColor="yellow">
+						<Label>Label11</Label>
+					</View>
+					<View backgroundColor="green">
+						<Label>Label12</Label>
+					</View>
+				</ScrollableView>
+				<View height="10%" layout="horizontal">
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+				</View>
+			</Window>
+		</Tab>
+		<Tab title="Tab 4" icon="">
+			<Window title="Tab 4" layout="vertical">
+				<ScrollableView height="90%">
+					<View backgroundColor="red">
+						<Label>Label13</Label>
+					</View>
+					<View backgroundColor="blue">
+						<Label>Label14</Label>
+					</View>
+					<View backgroundColor="yellow">
+						<Label>Label15</Label>
+					</View>
+					<View backgroundColor="green">
+						<Label>Label16</Label>
+					</View>
+				</ScrollableView>
+				<View id="pagging" height="10%" width="Ti.UI.SIZE" layout="horizontal">
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+					<View width="24.9%" height="Titanium.UI.FILL">
+						<Label>View</Label>
+					</View>
+				</View>
+			</Window>
+		</Tab>
+	</TabGroup>
 </Alloy>
