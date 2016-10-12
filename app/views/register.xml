@@ -1,6 +1,6 @@
 <Alloy>
 	 <ScrollView id="scrollView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="100%" width="100%">
-	<View id="view" height="200%" width="100%" layout="vertical">
+	<View id="view" height="Ti.UI.SIZE" width="100%" layout="vertical">
 		<ImageView id="logo" class="logo" image="/images/logo.png"/>
 		<Label>Create your account</Label>
 		
@@ -16,23 +16,26 @@
 		<TextField class="name" id="gender" hintText="gender"></TextField>
 		<TextField class="name" id="nationality" hintText="nationality"></TextField>
 	    <TextField class="name" id="street" hintText="street"></TextField>
-	    		<TextField class="numberfield" id="phone" hintText="phone"></TextField>
-	   
-		<TextField class="name" id="city" hintText="city" width="40%" layout="horizontal"></TextField>
-		<TextField class="numberfield" id="postcode" hintText="postcode" width="30%" layout="horizontal"></TextField>
+	    <TextField class="numberfield" id="phone" hintText="phone"></TextField>
+	    <TextField class="name" id="city" hintText="city"></TextField>
+	    <View layout="horizontal" height="50dp" left="55dp">
+		<TextField class="numberfield" id="postcode" hintText="postcode" width="20%"></TextField>
+		<TextField class="name" id="country" hintText="country" width="60%" left="7dp"></TextField>
+		</View>
 		
-		<TextField class="name" id="country" hintText="country"></TextField>
+	    
+		<Label>Which language do you speak?</Label>
+		<View layout="horizontal" height="80dp" left="90dp">
+			<View layout="vertical" height="70dp" width="30%">
+				<Label>English</Label>
+	            <Switch id="basicSwitch" value="true" onChange="outputState" platform="android"/>
+			</View>
+			<View layout="vertical" height="70dp" width="30%">
+				<Label>Danish</Label>
+	            <Switch id="basicSwitch" value="true" onChange="outputState" platform="android"/>
+			</View>
+		</View>
 		
-		
-		
-		<Label>Do you speak Danish?</Label>
-		
-			
-		<Switch id="basicSwitch" value="true" onChange="outputState" platform="android"/>
-				
-		<Label>Do you speak English?</Label>
-		
-	 <Switch id="basicSwitch" value="true" onChange="outputState" platform="android"/>
 		
 		<Label>When would you like to work?</Label>
 		
