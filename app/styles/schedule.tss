@@ -1,0 +1,50 @@
+
+"#view" : {
+   layout: 'vertical',
+   width: '100%',
+   height: '100%',
+   backgroundColor: "#FDF9F4"
+}
+
+// General style of text
+
+"Label": {
+	color: "black",
+	top: '10dp',
+	font: {
+		fontSize: 10
+	}
+}
+
+// Text stylying for highlightining important information
+
+".highlighted": {
+	font: {
+		fontSize: 12,
+		fontFamily: 'eveleth-regular',
+	},
+	left:"10dp"
+}
+
+// The border around one task information
+
+".taskBorder": {
+	borderRadius: "10dp",
+	borderColor: "black",
+	height:"30%",
+	width:"70%",
+	top:"5%",
+	backgroundColor:"white"
+}
+
+".TaskField": {
+	height:"20%",
+	left:"20%"
+}
+
+".fontStyle":{
+	font: {
+		fontSize: 10,
+		fontFamily: 'brown-regular',
+	},
+}

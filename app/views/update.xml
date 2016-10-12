@@ -1,0 +1,73 @@
+<Alloy>
+	 <ScrollView id="scrollView" height="100%" width="100%">
+	<View id="view" height="Ti.UI.SIZE" width="100%" layout="vertical">
+		
+		<Label>Update your profile</Label>
+		
+    <Label>Change the password</Label>
+		<TextField class="name" id="password" hintText="password" passwordMask="true"></TextField>
+		<TextField class="name" id="password" hintText="repeat password" passwordMask="true"></TextField>
+
+	<Label>Personal information</Label>
+		<TextField class="name" id="fullname" hintText="fullname"></TextField>
+	    <TextField class="name" id="street" hintText="street"></TextField>
+	    <TextField class="numberfield" id="phone" hintText="phone"></TextField>
+	    <TextField class="name" id="city" hintText="city"></TextField>
+	    <View layout="horizontal" height="50dp" left="55dp">
+		<TextField class="numberfield" id="postcode" hintText="postcode" width="20%"></TextField>
+		<TextField class="name" id="country" hintText="country" width="60%" left="7dp"></TextField>
+		</View>
+
+
+<Label>Which language do you speak?</Label>
+		<View layout="horizontal" height="80dp" left="90dp">
+			<View layout="vertical" height="70dp" width="30%">
+				<Label>English</Label>
+	            <Switch id="basicSwitch" value="true" onChange="outputState" platform="android"/>
+			</View>
+			<View layout="vertical" height="70dp" width="30%">
+				<Label>Danish</Label>
+	            <Switch id="basicSwitch" value="true" onChange="outputState" platform="android"/>
+			</View>
+		</View>
+
+
+		<Label>When would you like to work?</Label>
+		
+		   <Picker id="picker" top="10" selectionIndicator="true" useSpinner="false" backgroundColor="#043540" width="70%">
+            <PickerColumn id="column1">
+                <PickerRow color="white" title="Before"/>
+                <PickerRow color="white" title="During"/>
+                <PickerRow color="white" title="After"/>
+               
+            </PickerColumn>
+           
+        </Picker>
+        
+        <Label>Choose the available task</Label>
+		
+		   <Picker id="picker" top="10" selectionIndicator="true" useSpinner="false" backgroundColor="#043540" width="70%">
+            <PickerColumn id="column1">
+                <PickerRow color="white" title="Selling tickets"/>
+                <PickerRow color="white" title="Selling beers"/>
+                <PickerRow color="white"  title="Help point"/>
+               
+            </PickerColumn>
+           
+        </Picker>
+
+
+<Label>With who you would like to work?</Label>
+		<TextField class="name" id="workwith" hintText="Write name"></TextField>
+		
+		<Button id="profileImage" onClick="uploadImage">Upload Image</Button>
+	 
+	
+		<Button id="register" onClick="updateUser">Update profile</Button>
+
+
+
+	</View>
+		</ScrollView>
+
+</Alloy>

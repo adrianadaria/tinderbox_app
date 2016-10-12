@@ -1,0 +1,108 @@
+"#view" : {
+   layout: 'vertical',
+   width: '100%',
+   height: '100%',
+   backgroundColor: "#FDF9F4"
+}
+
+
+
+// Text stylying, for example for "Create your account"
+
+"Label": {
+	color: "#001133",
+	top: '10dp',
+	font: {
+		fontSize: 16
+	}
+}
+
+
+
+"TextField": {
+	width:'70%', 
+	height:'35dp',
+	hintTextColor: '#CBCAC9',
+	backgroundColor: "white",
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	borderRadius: '10dp',
+	color: "#001133",
+	borderColor: '#CBCAC9',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontSize: 12
+	}
+}
+
+// This class is to set the keyboardType to default, used for field which requires just text
+".name": {
+	top: '10dp',
+	keyboardType: Ti.UI.KEYBOARD_DEFAULT,
+	returnKeyType: Ti.UI.KEYBOARD_DEFAULT,
+	autocorrect: true,
+	hintText: 'username',
+	scrollable:false
+}
+
+
+// This class is to set the keyboardType to numbers, used for postalcode and phone number
+
+
+".numberfield": {
+	top: '10dp',
+	keyboardType:Ti.UI.KEYBOARD_NUMBER_PAD,
+	returnKeyType:Ti.UI.KEYBOARD_NUMBER_PAD,
+	autocorrect: true,
+	scrollable:false
+}
+
+// This class is to set the keyboardType = EMAIL, used for email textfield
+
+".emailfield": {
+	top: '10dp',
+	keyboardType:Ti.UI.KEYBOARD_EMAIL,
+	returnKeyType:Ti.UI.KEYBOARD_EMAIL,
+	autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+	softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS,
+	autocorrect: true,
+	scrollable:false
+}
+
+// This is the switch for languages
+
+"#basicSwitch": {
+  style: Ti.UI.Android.SWITCH_STYLE_CHECKBOX,
+  titleOn:'Yes',
+  titleOff:'No',
+  value:true,
+  backgroundColor:"#043540",
+  backgroundSelectedColor:"#8BC7B9"
+}
+
+
+// Style of Sign Up button
+
+
+"#register": {
+	top: '40dp',
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	borderRadius: '10dp',
+	backgroundColor: "#FEDC70",
+	color: "#F18A78",
+	width: '40%'
+}
+
+// Style of Upload Image button
+
+"#profileImage": {
+	top: '20dp',
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	borderRadius: '10dp',
+	backgroundColor: "white",
+	color: "#CBCAC9",
+	borderColor:"#CBCAC9",
+	width: '70%',
+	height:'35dp'
+}
+
+

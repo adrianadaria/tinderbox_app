@@ -1,130 +1,74 @@
 <Alloy>
 	<TabGroup>
-		<Tab title="Tab 1" icon="">
-			<Window title="Tab 1" layout="vertical">
+		<Tab title="News" icon="">
+			<Window title="News" layout="vertical" backgroundColor="#FDF9F4">
+			<Require src="news"></Require>
+			</Window>
+		</Tab>
+		
+		<Tab title="Schedule" icon="">
+			<Window title="Schedule" layout="vertical">
+				<Require src="schedule"></Require>
+			</Window>
+		</Tab>
+		
+		<Tab title="Profile" icon="">
+			<Window title="Profile" layout="vertical">
 				<ScrollableView height="90%">
 					<View backgroundColor="red">
-						<Label>Label1</Label>
+						<Label>Ticket</Label>
 					</View>
 					<View backgroundColor="blue">
-						<Label>Label2</Label>
+						<Label>Group</Label>
 					</View>
 					<View backgroundColor="yellow">
-						<Label>Label3</Label>
+						<Require src="update"></Require>
 					</View>
 					<View backgroundColor="green">
-						<Label>Label4</Label>
+						<Label>FAQ</Label>
 					</View>
 				</ScrollableView>
 				<View height="10%" layout="horizontal">
 					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
+						<Label>Ticket</Label>
 					</View>
 					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
+						<Label>Group</Label>
 					</View>
 					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
+						<Label>Update</Label>
 					</View>
 					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
+						<Label>FAQ</Label>
 					</View>
 				</View>
 			</Window>
 		</Tab>
-		<Tab title="Tab 2" icon="">
-			<Window title="Tab 2" layout="vertical">
+		<Tab title="Messages" icon="">
+			<Window title="Messages" layout="vertical">
 				<ScrollableView height="90%">
 					<View backgroundColor="red">
-						<Label>Label5</Label>
+						<Label>Sent</Label>
 					</View>
 					<View backgroundColor="blue">
-						<Label>Label6</Label>
+						<Label>Inbox</Label>
 					</View>
 					<View backgroundColor="yellow">
-						<Label>Label7</Label>
+						<Label>Create</Label>
 					</View>
-					<View backgroundColor="green">
-						<Label>Label8</Label>
-					</View>
-				</ScrollableView>
-				<View height="10%" layout="horizontal">
-					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
-					</View>
-					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
-					</View>
-					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
-					</View>
-					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
-					</View>
-				</View>
-			</Window>
-		</Tab>
-		<Tab title="Tab 3" icon="">
-			<Window title="Tab 3" layout="vertical">
-				<ScrollableView height="90%">
-					<View backgroundColor="red">
-						<Label>Label9</Label>
-					</View>
-					<View backgroundColor="blue">
-						<Label>Label10</Label>
-					</View>
-					<View backgroundColor="yellow">
-						<Label>Label11</Label>
-					</View>
-					<View backgroundColor="green">
-						<Label>Label12</Label>
-					</View>
-				</ScrollableView>
-				<View height="10%" layout="horizontal">
-					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
-					</View>
-					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
-					</View>
-					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
-					</View>
-					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
-					</View>
-				</View>
-			</Window>
-		</Tab>
-		<Tab title="Tab 4" icon="">
-			<Window title="Tab 4" layout="vertical">
-				<ScrollableView height="90%">
-					<View backgroundColor="red">
-						<Label>Label13</Label>
-					</View>
-					<View backgroundColor="blue">
-						<Label>Label14</Label>
-					</View>
-					<View backgroundColor="yellow">
-						<Label>Label15</Label>
-					</View>
-					<View backgroundColor="green">
-						<Label>Label16</Label>
-					</View>
+					
 				</ScrollableView>
 				<View id="pagging" height="10%" width="Ti.UI.SIZE" layout="horizontal">
-					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
+					<View width="33.3%" height="Titanium.UI.FILL">
+						<Label>Sent</Label>
 					</View>
-					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
+					<View width="33.3%" height="Titanium.UI.FILL">
+						<Label>Inbox</Label>
 					</View>
-					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
+					<View width="33.3%" height="Titanium.UI.FILL">
+						<Label>Create</Label>
 					</View>
-					<View width="24.9%" height="Titanium.UI.FILL">
-						<Label>View</Label>
-					</View>
+					
 				</View>
 			</Window>
 		</Tab>
