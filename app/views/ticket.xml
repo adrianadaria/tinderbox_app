@@ -1,7 +1,7 @@
 <Alloy>
 	
 	
-	<ImageView class="logo" image="/images/logo.png" width="100%" top="0dp"></ImageView>
+	
 	<ImageView id="qrCode" image="/images/qrCode.PNG" width="70%" top="34%"></ImageView>
 	
 	
