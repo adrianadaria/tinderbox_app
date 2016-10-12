@@ -15,17 +15,17 @@
 		<Tab title="Profile" icon="">
 			<Window title="Profile" layout="vertical">
 				<ScrollableView height="90%">
-					<View backgroundColor="red">
-						<Label>Ticket</Label>
+					<View backgroundColor="#FDF9F4">
+						<Require src="ticket"></Require>
 					</View>
-					<View backgroundColor="blue">
-						<Label>Group</Label>
+					<View backgroundColor="#FDF9F4">
+						<Require src="group"></Require>
 					</View>
-					<View backgroundColor="yellow">
+					<View backgroundColor="#FDF9F4">
 						<Require src="update"></Require>
 					</View>
-					<View backgroundColor="green">
-						<Label>FAQ</Label>
+					<View backgroundColor="#FDF9F4">
+						<Require src="faq"></Require>
 					</View>
 				</ScrollableView>
 				<View height="10%" layout="horizontal">
