@@ -1,0 +1,79 @@
+<Alloy>
+	<ScrollView showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="100%" width="100%">
+	<View id="container" layout="vertical">
+		<ImageView image="/images/logo.png" width="100%"></ImageView>
+		<TableView id="table" top="40dp">
+		
+		<TableViewRow id="row1">
+		<View id="holder">
+							
+			<Label left="10dp" color="black">Member name</Label>
+			<ImageView class="phone" image="/images/phone.png" ></ImageView>
+							
+		</View>
+		</TableViewRow>
+		
+		<TableViewRow id="row1">
+		<View id="holder">
+							
+			<Label left="10dp" color="black">Member name</Label>
+			<ImageView class="phone" image="/images/phone.png" ></ImageView>
+							
+		</View>
+		</TableViewRow>
+		<TableViewRow id="row1">
+		<View id="holder">
+							
+			<Label left="10dp" color="black">Member name</Label>
+			<ImageView class="phone" image="/images/phone.png" ></ImageView>
+							
+		</View>
+		</TableViewRow>
+		<TableViewRow id="row1">
+		<View id="holder">
+							
+			<Label left="10dp" color="black">Member name</Label>
+			<ImageView class="phone" image="/images/phone.png" ></ImageView>
+							
+		</View>
+		</TableViewRow>
+		<TableViewRow id="row1">
+		<View id="holder">
+							
+			<Label left="10dp" color="black">Member name</Label>
+			<ImageView class="phone" image="/images/phone.png" ></ImageView>
+							
+		</View>
+		</TableViewRow>
+		<TableViewRow id="row1">
+		<View id="holder">
+							
+			<Label left="10dp" color="black">Member name</Label>
+			<ImageView class="phone" image="/images/phone.png" ></ImageView>
+							
+		</View>
+		</TableViewRow>
+		<TableViewRow id="row1">
+		<View id="holder">
+							
+			<Label left="10dp" color="black">Member name</Label>
+			<ImageView class="phone" image="/images/phone.png" ></ImageView>
+							
+		</View>
+		</TableViewRow>
+		<TableViewRow id="row1">
+		<View id="holder">
+							
+			<Label left="10dp" color="black">Member name</Label>
+			<ImageView class="phone" image="/images/phone.png" ></ImageView>
+							
+		</View>
+		</TableViewRow>
+		
+		</TableView>
+		
+		
+	</View>
+	</ScrollView>
+	
+</Alloy>
