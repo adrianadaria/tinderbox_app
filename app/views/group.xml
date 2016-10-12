@@ -1,7 +1,7 @@
 <Alloy>
 	<ScrollView showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="100%" width="100%">
 	<View id="container" layout="vertical">
-		<ImageView image="/images/logo.png" width="100%"></ImageView>
+		
 		<TableView id="table" top="40dp">
 		
 		<TableViewRow id="row1">
