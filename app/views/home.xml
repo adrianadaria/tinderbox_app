@@ -53,8 +53,8 @@
 					<View backgroundColor="blue">
 						<Label>Inbox</Label>
 					</View>
-					<View backgroundColor="yellow">
-						<Label>Create</Label>
+					<View backgroundColor="#FDF9F4">
+						<Require src="createMessage"></Require>
 					</View>
 					
 				</ScrollableView>
