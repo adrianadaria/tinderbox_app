@@ -76,12 +76,10 @@
 // This is the switch for languages
 
 "#basicSwitch": {
-	 style: Ti.UI.Android.SWITCH_STYLE_TOGGLEBUTTON,
+  style: Ti.UI.Android.SWITCH_STYLE_CHECKBOX,
   titleOn:'Yes',
   titleOff:'No',
   value:true,
-  width: 50, 
-  height:50,
   backgroundColor:"#043540",
   backgroundSelectedColor:"#8BC7B9"
 }
