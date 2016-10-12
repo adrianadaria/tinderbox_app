@@ -1,0 +1,14 @@
+<Alloy>
+	 <View>
+        <TableView id="table">
+         <TableViewRow title="1. How many hours do I have to work per day?" click='no' class="question"/>
+         <TableViewRow title="2. Will I get free lunch?" click='no' class="question"/>
+         <TableViewRow title="3. If I am volunteer, will I get a Free Ticket for Tinderbox?" click='no' class="question"/>
+         <TableViewRow title="4. Can I be volonteer if I am under 18 years old?" click='no' class="question"/>
+         <TableViewRow title="5. I want to be in the group with my friend, is it possible?" click='no' class="question"/>
+         <TableViewRow title="6. When I will get a confirmation of being accepted as volunteer?" click='no' class="question"/>
+         <TableViewRow title="7. I don't speak Danish, but I speak English, can I still help?" click='no' class="question"/>
+         <TableViewRow title="8. What happen if I will not come on schedule date?" click='no' class="question"/>
+        </TableView>
+    </View>
+</Alloy>
