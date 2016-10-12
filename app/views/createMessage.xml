@@ -1,5 +1,5 @@
 <Alloy>
-	 <ScrollView id="scrollView" height="100%" width="100%">
+	
 	<View id="view" height="Ti.UI.SIZE" width="100%" layout="vertical">
 		
 		<Label>Write message to a group member</Label>
@@ -17,7 +17,7 @@
 
 
 	</View>
-		</ScrollView>
+		
 
 </Alloy>
 
