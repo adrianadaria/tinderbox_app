@@ -1,5 +1,6 @@
 <Alloy>
 	<ScrollableView height="90%">
+		<ActionBar id="actionbar" title=" "/>
 		<View layout="vertical">
 		<ImageView id="logo" class="logo" image="logo.png"/>
 		<TableView height="100%" id="faqTable" >
