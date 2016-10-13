@@ -2,15 +2,15 @@
 	 <ScrollView id="scrollView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="100%" width="100%">
 	<View id="view" height="Ti.UI.SIZE" width="100%" layout="vertical">
 		<ImageView id="logo" class="logo" image="/images/logo.png"/>
-		<Label>Create your account</Label>
+		<Label class="titleLabel">Create your account</Label>
 		
-		<Label>Details for login</Label>
+		<Label class="normalTitle">Details for login</Label>
 		<TextField class="emailfield" id="email" hintText="email"></TextField>
 		<TextField class="name" id="password" hintText="password" passwordMask="true"></TextField>
 		<TextField class="name" id="password" hintText="repeat password" passwordMask="true"></TextField>
 		
 		
-		<Label>Personal information</Label>
+		<Label class="normalTitle">Personal information</Label>
 		<TextField class="name" id="fullname" hintText="fullname"></TextField>
 		<TextField class="name" id="birthday" hintText="birthday"></TextField>
 		<TextField class="name" id="gender" hintText="gender"></TextField>
@@ -24,20 +24,20 @@
 		</View>
 		
 	    
-		<Label>Which language do you speak?</Label>
+		<Label class="normalTitle">>Which language do you speak?</Label>
 		<View layout="horizontal" height="80dp" left="90dp">
 			<View layout="vertical" height="70dp" width="30%">
-				<Label>English</Label>
+				<Label class="normalTitle">English</Label>
 	            <Switch id="basicSwitch" value="true" onChange="outputState" platform="android"/>
 			</View>
 			<View layout="vertical" height="70dp" width="30%">
-				<Label>Danish</Label>
+				<Label class="normalTitle">Danish</Label>
 	            <Switch id="basicSwitch" value="true" onChange="outputState" platform="android"/>
 			</View>
 		</View>
 		
 		
-		<Label>When would you like to work?</Label>
+		<Label class="normalTitle">When would you like to work?</Label>
 		
 		   <Picker id="picker" top="10" selectionIndicator="true" useSpinner="false" backgroundColor="#043540" width="70%">
             <PickerColumn id="column1">
@@ -49,7 +49,7 @@
            
         </Picker>
         
-        <Label>Choose the available task</Label>
+        <Label class="normalTitle">Choose the available task</Label>
 		
 		   <Picker id="picker" top="10" selectionIndicator="true" useSpinner="false" backgroundColor="#043540" width="70%">
             <PickerColumn id="column1">
@@ -61,7 +61,7 @@
            
         </Picker>
 		
-		<Label>With who you would like to work?</Label>
+		<Label class="normalTitle">With who you would like to work?</Label>
 		<TextField class="name" id="workwith" hintText="Write name"></TextField>
 		
 		<Button id="profileImage" onClick="uploadImage">Upload Image</Button>
