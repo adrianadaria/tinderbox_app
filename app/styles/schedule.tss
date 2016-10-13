@@ -48,3 +48,12 @@
 		fontFamily: 'brown-regular',
 	},
 }
+
+".titleLabel":{
+	font: {
+		fontSize: 14,
+		fontFamily: 'eveleth-thin',
+	},
+	textAling:"center",
+	top:"30dp"
+}
