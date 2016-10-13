@@ -1,5 +1,6 @@
 <Alloy>
 	<ScrollView showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="100%" width="100%">
+		<ActionBar id="actionbar" title=" "/>
 	<View id="container" layout="vertical">
 		
 		<TableView id="table" top="40dp">
