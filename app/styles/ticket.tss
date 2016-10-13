@@ -1,0 +1,9 @@
+"Label":{
+	
+	color: "#001133",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontSize: 12,
+		fontFamily: 'eveleth-regular',
+	}
+}
