@@ -1,14 +1,33 @@
 <Alloy>
-	 <View>
-        <TableView id="table">
-         <TableViewRow title="1. How many hours do I have to work per day?" click='no' class="question"/>
-         <TableViewRow title="2. Will I get free lunch?" click='no' class="question"/>
-         <TableViewRow title="3. If I am volunteer, will I get a Free Ticket for Tinderbox?" click='no' class="question"/>
-         <TableViewRow title="4. Can I be volonteer if I am under 18 years old?" click='no' class="question"/>
-         <TableViewRow title="5. I want to be in the group with my friend, is it possible?" click='no' class="question"/>
-         <TableViewRow title="6. When I will get a confirmation of being accepted as volunteer?" click='no' class="question"/>
-         <TableViewRow title="7. I don't speak Danish, but I speak English, can I still help?" click='no' class="question"/>
-         <TableViewRow title="8. What happen if I will not come on schedule date?" click='no' class="question"/>
-        </TableView>
-    </View>
+	<ScrollableView height="90%">
+		<View layout="vertical">
+		<ImageView id="logo" class="logo" image="logo.png"/>
+		<TableView height="100%" id="faqTable" >
+			<TableViewRow rowQuestion="1. How many hours do I have to work per day?" rowAnswer="Approximately 14 hours, including breaks">
+					<Label class="faqQuestion" >1. How many hours do I have to work per day?</Label>
+			</TableViewRow>
+						<TableViewRow rowQuestion="2. Will I get free lunch?" rowAnswer="Yes, there are several meals a day provided">
+					<Label class="faqQuestion" >2. Will I get free lunch?</Label>
+			</TableViewRow>
+						<TableViewRow rowQuestion="3. If I am volunteer, will I get a Free Ticket for Tinderbox?" rowAnswer="Yes you will get a free ticket">
+					<Label class="faqQuestion" >3. If I am volunteer, will I get a Free Ticket for Tinderbox?</Label>
+			</TableViewRow>
+						<TableViewRow rowQuestion="4. Can I be volonteer if I am under 18 years old?" rowAnswer="The minimum allowed age is 16">
+					<Label class="faqQuestion" >4. Can I be volonteer if I am under 18 years old?</Label>
+			</TableViewRow>
+						<TableViewRow rowQuestion="5. I want to be in the group with my friend, is it possible?" rowAnswer="You can choose that when you register">
+					<Label class="faqQuestion" >5. I want to be in the group with my friend, is it possible?</Label>
+			</TableViewRow>
+						<TableViewRow rowQuestion="6. When I will get a confirmation of being accepted as volunteer?" rowAnswer="Within 20 days of registration">
+					<Label class="faqQuestion" >6. When I will get a confirmation of being accepted as volunteer?</Label>
+			</TableViewRow>
+						<TableViewRow rowQuestion="7. I don't speak Danish, but I speak English, can I still help?" rowAnswer="Ofcourse! There are no language barriers in Tinderbox">
+					<Label class="faqQuestion" >7. I don't speak Danish, but I speak English, can I still help?</Label>
+			</TableViewRow>
+						<TableViewRow rowQuestion="8. What happen if I will not come on schedule date?" rowAnswer="You will be removed from the volunteer list">
+					<Label class="faqQuestion" >8. What happen if I will not come on schedule date?</Label>
+			</TableViewRow>
+		</TableView>
+		</View>
+		</ScrollableView>
 </Alloy>
