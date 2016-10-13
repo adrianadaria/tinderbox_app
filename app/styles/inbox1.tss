@@ -1,4 +1,21 @@
 
 ".container" : {
-  
+   backgroundColor: "#FDF9F4"
+}
+
+".inboxField" : {
+   backgroundColor: "white",
+   height: "35dp",
+   borderRadius: '10dp',
+	borderColor: '#CBCAC9',
+	bottom: '15dp',
+	width:"70%",
+	color:"black",
+	top:"10dp",
+	font: {
+		fontSize: 14,
+		fontFamily: 'brown-regular',
+	},
+	textAlign:"center"
+	
 }
