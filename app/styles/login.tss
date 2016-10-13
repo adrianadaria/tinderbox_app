@@ -31,6 +31,7 @@
 	keyboardType: Ti.UI.KEYBOARD_DEFAULT,
 	returnKeyType: Ti.UI.KEYBOARD_DEFAULT,
 	autocorrect: true,
+	top:'40dp'
 
 }
 
@@ -58,4 +59,14 @@
 	color: '#8BC7B9',
 	width: '60%',
 	backgroundSelectedColor:"#8BC7B9"
+}
+"#loginLabel":{
+	
+	color: "#001133",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontSize: 12,
+		fontFamily: 'eveleth-regular',
+	},
+	top:'90dp'
 }
