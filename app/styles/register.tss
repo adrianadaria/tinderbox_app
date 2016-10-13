@@ -17,11 +17,26 @@
 "Label": {
 	color: "#001133",
 	top: '10dp',
-	font: {
-		fontSize: 16
-	}
+	
 }
 
+".titleLabel":{
+	color: "#001133",
+	top: '10dp',
+	font: {
+		fontSize: 16,
+		fontFamily: 'eveleth-thin',
+	},
+}
+
+".normalTitle":{
+	color: "#001133",
+	top: '10dp',
+	font: {
+		fontSize: 16,
+		fontFamily: 'brown-regular',
+	},
+}
 
 
 "TextField": {
