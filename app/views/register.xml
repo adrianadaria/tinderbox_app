@@ -24,7 +24,7 @@
 		</View>
 		
 	    
-		<Label class="normalTitle">>Which language do you speak?</Label>
+		<Label class="normalTitle">Which language do you speak?</Label>
 		<View layout="horizontal" height="80dp" left="90dp">
 			<View layout="vertical" height="70dp" width="30%">
 				<Label class="normalTitle">English</Label>
