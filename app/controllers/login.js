@@ -1,6 +1,14 @@
 var logWin = $.logWin;
 
-
+logWin.addEventListener('open',function(evt){
+	if (OS_ANDROID){
+		var activity=evt.source.getActivity();
+		var actionbar=activity.actionBar;
+		
+		actionbar.title=" ";
+		
+	}
+});
 
 var logView = $.logView;
 var regView = Alloy.createController('register').getView();
@@ -32,6 +40,7 @@ logWin.addEventListener("close", function() {
 	$.destroy();
 });
 
+
 var win = Ti.UI.createWindow({
     title: "Old Title",
     navBarHidden: false
@@ -45,10 +54,11 @@ win.addEventListener("open", function() {
         } else {
             actionBar = win.activity.actionBar;
             if (actionBar) {
-                actionBar.backgroundImage = "/bg.png";
-                actionBar.title = "New Title";
-                actionBar.onHomeIconItemSelected = function() {
-                    Ti.API.info("Home icon clicked!");
+                //actionBar.backgroundImage = "/images/logo.png";
+                //actionBar.title = "New Title";
+                //actionBar.onHomeIconItemSelected = function() 
+                {
+                    
                 };
             }
         }

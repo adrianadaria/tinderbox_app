@@ -1,4 +1,3 @@
-// Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
 
 now();
@@ -25,9 +24,8 @@ function now(){
 		for (var i = 0; i < numberOfPages; i++) {
 			pages[i].setOpacity(0.5);
 		}
-		// Bump the opacity of the new current page
-		var currPage = event.currentPage;
-		pages[currPage].setOpacity(1);
+	var m1 = $.messagesMenu.currentPage;
+		pages[m1].setOpacity(1);
 		
 	};
 	
@@ -36,9 +34,8 @@ function now(){
 		for (var i = 0; i < numberOfPages2; i++) {
 			pages2[i].setOpacity(0.5);
 		}
-		// Bump the opacity of the new current page
-		var currPage = event.currentPage;
-		pages2[currPage].setOpacity(1);
+		var m2 = $.messageMenu2.currentPage;
+		pages2[m2].setOpacity(1);
 		
 	};
 	
@@ -68,3 +65,10 @@ function now(){
 	$.messageMenu2.addEventListener("scroll", onScroll2);
 	$.messageMenu2.addEventListener("postlayout", onPostLayout2);
 };
+
+
+
+
+
+
+

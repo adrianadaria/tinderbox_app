@@ -30,7 +30,7 @@ overrode the settings with other TSS, XML, or JS settings:
     
   
     backgroundImage: "/images/logo.png",
-    color:"transparent",
+    color:"#043540",
     backgroundSize:"cover"
     
 }

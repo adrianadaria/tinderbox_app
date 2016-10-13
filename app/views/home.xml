@@ -3,7 +3,7 @@
 		<ActionBar id="actionbar" title=" "/>
 		<Tab title="News" icon="">
 			<Window title="News" layout="vertical" backgroundColor="#FDF9F4">
-				<ActionBar id="actionbar" title=" "/>
+				<ActionBar id="actionbar"/>
 			<Require src="news"></Require>
 			</Window>
 		</Tab>
