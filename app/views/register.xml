@@ -1,7 +1,7 @@
 <Alloy>
 	 <ScrollView id="scrollView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="100%" width="100%">
 	<View id="view" height="Ti.UI.SIZE" width="100%" layout="vertical">
-		<ImageView id="logo" class="logo" image="/images/logo.png"/>
+		
 		<Label class="titleLabel">Create your account</Label>
 		
 		<Label class="normalTitle">Details for login</Label>
