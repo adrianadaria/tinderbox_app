@@ -1,7 +1,7 @@
 <Alloy>
 	<ScrollView id="scrollView" height="100%" width="100%">
 	 <View id="view" height="Ti.UI.SIZE" width="100%" layout="vertical">
-	
+	<Label class="titleLabel">Your schedule</Label>
 <View class="taskBorder" layout="vertical">
 	<View layout="horizontal" class="TaskField" top="10%">	
 		<Label class="fontStyle">Task:</Label>
