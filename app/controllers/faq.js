@@ -5,7 +5,7 @@ function selectRow(e) {
  var rowQuestion = e.rowData.rowQuestion;
  var rowAnswer = e.rowData.rowAnswer;
  //alert(rowDescription);
- 	var detailController = Alloy.createController("faq", {
+ 	var detailController = Alloy.createController("faqdetail", {
 		rowQuestion : rowQuestion,
 		rowAnswer : rowAnswer
 	});
