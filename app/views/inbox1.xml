@@ -1,5 +1,6 @@
 <Alloy>
 	<Window id="inbox1win" backgroundColor="white" height="60%" layout="vertical">
+		<ActionBar id="actionbar" title=" "/>
 	<View class="container" layout="vertical">
 		<Label class="inboxField">Subject: Brewing Beer</Label>
 		<Label class="inboxField">Author: Morten</Label>
