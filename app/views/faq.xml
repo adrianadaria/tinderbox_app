@@ -1,8 +1,8 @@
 <Alloy>
 	<ScrollableView height="90%">
-		<ActionBar id="actionbar" title=" "/>
+		
 		<View layout="vertical">
-		<ImageView id="logo" class="logo" image="logo.png"/>
+		
 		<TableView height="100%" id="faqTable" >
 			<TableViewRow rowQuestion="1. How many hours do I have to work per day?" rowAnswer="Approximately 14 hours, including breaks">
 					<Label class="faqQuestion" >1. How many hours do I have to work per day?</Label>
