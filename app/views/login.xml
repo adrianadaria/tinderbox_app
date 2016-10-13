@@ -2,6 +2,7 @@
 	<Window id="logWin" exitOnClose="true">
 			<View id="logView">
 			<ImageView id="logo" class="logo" image="/images/logo.png"/>
+			<Label id="loginLabel">Login or Sign Up</Label>
 			<TextField id="username" hintText="Your name"></TextField>
 			<TextField id="password" hintText="Password"></TextField>
 			<Button id="login" onClick="login">Login</Button>
