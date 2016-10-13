@@ -1,7 +1,7 @@
 <Alloy>
 	
 	<View id="view" height="Ti.UI.SIZE" width="100%" layout="vertical">
-		
+		<ActionBar id="actionbar" title=" "/>
 		<Label>Write message to a group member</Label>
 		
 
