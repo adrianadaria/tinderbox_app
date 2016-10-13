@@ -1,5 +1,6 @@
 <Alloy>
 	<Window id="logWin" exitOnClose="true">
+		<ActionBar id="actionbar" title=" "/>
 			<View id="logView">
 			
 			<Label id="loginLabel">Login or Sign Up</Label>
