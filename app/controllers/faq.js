@@ -1,18 +1,34 @@
-var table=$.table;
-table.addEventListener('click',function(e){
-    if(e.source.click=='no')
-    {
-        e.source.click='yes';
-        var row = Ti.UI.createTableViewRow();
-        var nestedTab= Alloy.createController('tableView').getView();
-        row.add(nestedTab);
-        table.insertRowAfter(e.index,row);
-    }
-    else{
-        if(e.source.click=='yes')
-        {
-            e.source.click='no';
-            table.deleteRow(e.index+1);    
-        }
-    }
-});
+
+$.faqTable.addEventListener('click', selectRow);
+
+function selectRow(e) {
+ var rowQuestion = e.rowData.rowQuestion;
+ var rowAnswer = e.rowData.rowAnswer;
+ //alert(rowDescription);
+ 	var detailController = Alloy.createController("faq", {
+		rowQuestion : rowQuestion,
+		rowAnswer : rowAnswer
+	});
+	openAsModal(detailController.getView());
+}
+
+//
+
+
+
+function openAsModal(_view) {
+	if (OS_IOS) {
+		var navWindow = Titanium.UI.iOS.createNavigationWindow({
+			window : _view
+		});
+
+		_view.navWindow = navWindow;
+		navWindow.open({
+			modal : true
+		});
+	} else {
+		_view.open({
+			modal : true
+		});
+	}
+}
