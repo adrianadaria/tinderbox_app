@@ -31,3 +31,26 @@ logWin.addEventListener('android:back', function(e){
 logWin.addEventListener("close", function() {
 	$.destroy();
 });
+
+var win = Ti.UI.createWindow({
+    title: "Old Title",
+    navBarHidden: false
+});
+var actionBar;
+
+win.addEventListener("open", function() {
+    if (Ti.Platform.osname === "android") {
+        if (! win.activity) {
+            Ti.API.error("Can't access action bar on a lightweight window.");
+        } else {
+            actionBar = win.activity.actionBar;
+            if (actionBar) {
+                actionBar.backgroundImage = "/bg.png";
+                actionBar.title = "New Title";
+                actionBar.onHomeIconItemSelected = function() {
+                    Ti.API.info("Home icon clicked!");
+                };
+            }
+        }
+    }
+});
