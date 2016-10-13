@@ -15,7 +15,7 @@
 // ACS for your application and then fire an event (see below)
 // when connected or errored. if you do not use ACS in your
 // application as a client, you should remove this block
-(function(){
+/*(function(){
 var ACS = require('ti.cloud'),
     env = Ti.App.deployType.toLowerCase() === 'production' ? 'production' : 'development',
     username = Ti.App.Properties.getString('acs-username-'+env),
@@ -29,7 +29,7 @@ if (!env || !username || !password) { return; }
  * fires login.success with the user as argument on success
  * fires login.failed with the result as argument on error
  */
-ACS.Users.login({
+/*ACS.Users.login({
 	login:username,
 	password:password,
 }, function(result){
@@ -44,5 +44,5 @@ ACS.Users.login({
 	}
 });
 
-})();
+})();*/
 
