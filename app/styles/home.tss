@@ -1,4 +1,4 @@
-
-".container" : {
-  
+".menuItem1" : {
+	backgroundColor: '#1a53ff',
+	opacity: '0.5'
 }

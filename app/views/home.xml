@@ -14,7 +14,7 @@
 		
 		<Tab title="Profile" icon="">
 			<Window title="Profile" layout="vertical">
-				<ScrollableView height="90%">
+				<ScrollableView height="90%" id="messageMenu2" showPagingControl="true">
 					<View backgroundColor="#FDF9F4">
 						<Require src="ticket"></Require>
 					</View>
@@ -29,16 +29,16 @@
 					</View>
 				</ScrollableView>
 				<View height="10%" layout="horizontal">
-					<View width="24.9%" height="Titanium.UI.FILL">
+					<View class="menuItem1" id="p2View1" width="24.9%" height="Titanium.UI.FILL">
 						<Label>Ticket</Label>
 					</View>
-					<View width="24.9%" height="Titanium.UI.FILL">
+					<View class="menuItem1" id="p2View2" width="24.9%" height="Titanium.UI.FILL">
 						<Label>Group</Label>
 					</View>
-					<View width="24.9%" height="Titanium.UI.FILL">
+					<View class="menuItem1" id="p2View3" width="24.9%" height="Titanium.UI.FILL">
 						<Label>Update</Label>
 					</View>
-					<View width="24.9%" height="Titanium.UI.FILL">
+					<View class="menuItem1" id="p2View4" width="24.9%" height="Titanium.UI.FILL">
 						<Label>FAQ</Label>
 					</View>
 				</View>
@@ -46,7 +46,7 @@
 		</Tab>
 		<Tab title="Messages" icon="">
 			<Window title="Messages" layout="vertical">
-				<ScrollableView height="90%">
+				<ScrollableView height="90%" id="messagesMenu" showPagingControl="true" currentPage="1">
 					<View backgroundColor="#FDF9F4">
 						<Require src="sent"></Require>
 					</View>
@@ -59,16 +59,15 @@
 					
 				</ScrollableView>
 				<View id="pagging" height="10%" width="Ti.UI.SIZE" layout="horizontal">
-					<View width="33.3%" height="Titanium.UI.FILL">
+					<View class="menuItem1" id="pView1" width="33.3%" height="Titanium.UI.FILL">
 						<Label>Sent</Label>
 					</View>
-					<View width="33.3%" height="Titanium.UI.FILL">
+					<View class="menuItem1" id="pView2" width="33.3%" height="Titanium.UI.FILL">
 						<Label>Inbox</Label>
 					</View>
-					<View width="33.3%" height="Titanium.UI.FILL">
+					<View class="menuItem1" id="pView3" width="33.3%" height="Titanium.UI.FILL">
 						<Label>Create</Label>
 					</View>
-					
 				</View>
 			</Window>
 		</Tab>
