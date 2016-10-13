@@ -1,13 +1,16 @@
 <Alloy>
 	<TabGroup>
+		<ActionBar id="actionbar" title=" "/>
 		<Tab title="News" icon="">
 			<Window title="News" layout="vertical" backgroundColor="#FDF9F4">
+				<ActionBar id="actionbar" title=" "/>
 			<Require src="news"></Require>
 			</Window>
 		</Tab>
 		
 		<Tab title="Schedule" icon="">
 			<Window title="Schedule" layout="vertical">
+				<ActionBar id="actionbar" title=" "/>
 				<Require src="schedule"></Require>
 			</Window>
 		</Tab>
