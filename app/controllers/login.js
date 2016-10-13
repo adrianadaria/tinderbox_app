@@ -1,13 +1,6 @@
 var logWin = $.logWin;
 
-logWin.addEventListener('open',function(evt){
-	if (OS_ANDROID){
-		var activity=evt.source.getActivity();
-		var actionbar=activity.actionBar;
-		actionbar.title="TinderBox Vol App";
-		
-	}
-});
+
 
 var logView = $.logView;
 var regView = Alloy.createController('register').getView();
