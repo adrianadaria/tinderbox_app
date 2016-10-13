@@ -8,15 +8,23 @@
 }
 
 ".label": {
-	color: "#400040"
+	color: "#400040",
+	font: {
+		fontSize: 14,
+		fontFamily: 'brown-regular',
+	},
 }
 
 ".labelx": {
-	color: "red"
+	color: "red",
+	font: {
+		fontSize: 14,
+		fontFamily: 'eveleth-regular',
+	},
 }
 
 ".row": {
-	backgroundColor: "#cc98e5",
+	backgroundColor: "white",
 	height: '60dp',
 	width: '80%',
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
