@@ -26,12 +26,10 @@ overrode the settings with other TSS, XML, or JS settings:
 */
 
 
-"#actionbar": {
-    
-  
-    backgroundImage: "/images/logo.png",
-    color:"#043540",
-    backgroundSize:"cover"
+"ActionBar": {
+    //backgroundImage: "images/logo.png"
+    //color:"#043540",
+    //backgroundSize:"cover"
     
 }
 

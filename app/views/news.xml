@@ -1,71 +1,12 @@
 <Alloy>
 	<View class="container">
-		
-		
-	
-		<TableView height="100%" id="newsTable" >
-			<TableViewRow rowId="1" rowIheading="Martin Garrix bekræftet til Tinderbox" rowImg="/images/new1.jpg" rowDescription="tirsdag, 27. september 2016  Endnu en verdensstjerne-DJ indtager Odense til sommer, når hollandske Martin Garrix står som et af hovednavnene på Tinderbox 2017.  Han brød igennem i 2012, som kun 16-årig, med et remix af Christina Aguileras ”Your Body” og allerede i 2013 indtog han første-pladsen på den engelske hitliste med singlen ”Animals”. Stilen er progressive house, og de seneste år har Garrix cementeret positionen som en af verdens absolut mest betydningsfulde DJs blandt andet med hits og samarbejde med Ed Sheeran, Usher mfl. Lige nu topper han hitlisterne verden over med “In The Name Of Love”.  Sammen med Lukas Graham, der allerede er bekræftet til Tinderbox, har Martin Garrix været en af de absolut mest ønskede kunstnere til programmet for 2017. Faktisk er Martin Garrix den mest ønskede DJ overhovedet.  Med de to første hovednavne for 2017 på plads, er forberedelserne til næste års Tinderbox for alvor sat i gang. Blandt andet arbejder vi i tæt samarbejde med kommunen om nye tiltag på pladsen, og vi forventer at gøre plads til en endnu større fest i 2017.  Martin Garrix og Lukas Graham er de første bekræftede hovednavne til Tinderbox 2017. Lukas Grahams optræden vil samtidigt være hans eneste danske festivalkoncert næste sommer.">
+		<TableView height="100%" id="newsTable" dataCollection="news">
+			<TableViewRow rowId="{nid}" rowIheading="{tit}" rowImg="/images/new1.jpg" rowDescription="{des}">
 				<View layout="horizontal" class="newsContainer" >
 				<ImageView class="newsImage" image="/images/new1.jpg" />
-				<Label class="newsTitle" >Martin Garrix bekræftet til Tinderbox</Label>
-				</View>
-			</TableViewRow>
-			<TableViewRow rowId="2" rowIheading="Bliv praktikant på Tinderbox" rowImg="/images/new2.jpg" rowDescription="Som praktikant for NorthSide og Tinderbox bliver du en del af et dynamisk og engageret team af medarbejdere, der arbejder med alle aspekter af festivaludvikling og –ledelse.  Du vil få masser af ansvar og mulighed for indflydelse på festivaludvikling. Da vi har et højt arbejdstempo og mange løbende projekter, er det en nødvendighed, at du er initiativrig og i stand til at varetage opgaver selvstændigt.  Vi søger to kommunikationsprofiler med enten kommunikative, journalistiske, grafiske eller Social Media kompetencer, der desuden kan varetage følgende opgaver:  · Administration på sociale medier som Twitter, Facebook, Instagram, Snapchat etc.  · Webredaktion – Forfatning af nyheder til web og oversættelse til engelsk samt opdatering af websites.  · Planlægning af og udførelse af praktisk arbejde i forbindelse med mindre events.  · Konstruktiv dialog med festivalernes brugere både på mail og sociale medier.">
-				<View layout="horizontal" class="newsContainer" >
-				<ImageView class="newsImage" image="/images/new2.jpg" />
-				<Label class="newsTitle" >Bliv praktikant på Tinderbox</Label>
-				</View>
-			</TableViewRow>
-			<TableViewRow rowId="3" rowIheading="Bliv praktikant på Tinderbox" rowImg="/images/new3.jpg" rowDescription="Som praktikant for NorthSide og Tinderbox bliver du en del af et dynamisk og engageret team af medarbejdere, der arbejder med alle aspekter af festivaludvikling og –ledelse.  Du vil få masser af ansvar og mulighed for indflydelse på festivaludvikling. Da vi har et højt arbejdstempo og mange løbende projekter, er det en nødvendighed, at du er initiativrig og i stand til at varetage opgaver selvstændigt.  Vi søger to kommunikationsprofiler med enten kommunikative, journalistiske, grafiske eller Social Media kompetencer, der desuden kan varetage følgende opgaver:  · Administration på sociale medier som Twitter, Facebook, Instagram, Snapchat etc.  · Webredaktion – Forfatning af nyheder til web og oversættelse til engelsk samt opdatering af websites.  · Planlægning af og udførelse af praktisk arbejde i forbindelse med mindre events.  · Konstruktiv dialog med festivalernes brugere både på mail og sociale medier.">
-				<View layout="horizontal" class="newsContainer" >
-				<ImageView class="newsImage" image="/images/new3.jpg" />
-				<Label class="newsTitle" >Billetsalget til TB17 skydes i gang</Label>
-				</View>
-			</TableViewRow>
-			<TableViewRow rowId="4" rowIheading="Early Bird-billetsalget er nu i gang!" rowImg="/images/new4.jpg" rowDescription="Som praktikant for NorthSide og Tinderbox bliver du en del af et dynamisk og engageret team af medarbejdere, der arbejder med alle aspekter af festivaludvikling og –ledelse.  Du vil få masser af ansvar og mulighed for indflydelse på festivaludvikling. Da vi har et højt arbejdstempo og mange løbende projekter, er det en nødvendighed, at du er initiativrig og i stand til at varetage opgaver selvstændigt.  Vi søger to kommunikationsprofiler med enten kommunikative, journalistiske, grafiske eller Social Media kompetencer, der desuden kan varetage følgende opgaver:  · Administration på sociale medier som Twitter, Facebook, Instagram, Snapchat etc.  · Webredaktion – Forfatning af nyheder til web og oversættelse til engelsk samt opdatering af websites.  · Planlægning af og udførelse af praktisk arbejde i forbindelse med mindre events.  · Konstruktiv dialog med festivalernes brugere både på mail og sociale medier.">
-				<View layout="horizontal" class="newsContainer" >
-				<ImageView class="newsImage" image="/images/new4.jpg" />
-				<Label class="newsTitle" >Early Bird-billetsalget er nu i gang!</Label>
-				</View>
-			</TableViewRow>
-			<TableViewRow rowId="5" rowIheading="Phlake: Tinderbox er den bedste overraskelse" rowImg="/images/new5.jpg" rowDescription="Som praktikant for NorthSide og Tinderbox bliver du en del af et dynamisk og engageret team af medarbejdere, der arbejder med alle aspekter af festivaludvikling og –ledelse.  Du vil få masser af ansvar og mulighed for indflydelse på festivaludvikling. Da vi har et højt arbejdstempo og mange løbende projekter, er det en nødvendighed, at du er initiativrig og i stand til at varetage opgaver selvstændigt.  Vi søger to kommunikationsprofiler med enten kommunikative, journalistiske, grafiske eller Social Media kompetencer, der desuden kan varetage følgende opgaver:  · Administration på sociale medier som Twitter, Facebook, Instagram, Snapchat etc.  · Webredaktion – Forfatning af nyheder til web og oversættelse til engelsk samt opdatering af websites.  · Planlægning af og udførelse af praktisk arbejde i forbindelse med mindre events.  · Konstruktiv dialog med festivalernes brugere både på mail og sociale medier.">
-				<View layout="horizontal" class="newsContainer" >
-				<ImageView class="newsImage" image="/images/new5.jpg" />
-				<Label class="newsTitle" >Phlake: Tinderbox er den bedste overraskelse</Label>
-				</View>
-			</TableViewRow>
-			<TableViewRow rowId="6" rowIheading="Konferenciererne Uffe Holm og Brian Lykke elsker Tinderbox" rowImg="/images/new6.jpg" rowDescription="Som praktikant for NorthSide og Tinderbox bliver du en del af et dynamisk og engageret team af medarbejdere, der arbejder med alle aspekter af festivaludvikling og –ledelse.  Du vil få masser af ansvar og mulighed for indflydelse på festivaludvikling. Da vi har et højt arbejdstempo og mange løbende projekter, er det en nødvendighed, at du er initiativrig og i stand til at varetage opgaver selvstændigt.  Vi søger to kommunikationsprofiler med enten kommunikative, journalistiske, grafiske eller Social Media kompetencer, der desuden kan varetage følgende opgaver:  · Administration på sociale medier som Twitter, Facebook, Instagram, Snapchat etc.  · Webredaktion – Forfatning af nyheder til web og oversættelse til engelsk samt opdatering af websites.  · Planlægning af og udførelse af praktisk arbejde i forbindelse med mindre events.  · Konstruktiv dialog med festivalernes brugere både på mail og sociale medier.">
-				<View layout="horizontal" class="newsContainer" >
-				<ImageView class="newsImage" image="/images/new6.jpg" />
-				<Label class="newsTitle" >Konferenciererne Uffe Holm og Brian Lykke elsker Tinderbox</Label>
-				</View>
-			</TableViewRow>
-			<TableViewRow rowId="7" rowIheading="Lastbiltur i går, Tinderbox i dag" rowImg="/images/new7.jpg" rowDescription="c">
-				<View layout="horizontal" class="newsContainer" >
-				<ImageView class="newsImage" image="/images/new7.jpg" />
-				<Label class="newsTitle" >Lastbiltur i går, Tinderbox i dag</Label>
-				</View>
-			</TableViewRow>
-			<TableViewRow rowId="8" rowIheading="Konferenciererne Uffe Holm og Brian Lykke elsker Tinderbox" rowImg="/images/new8.jpg" rowDescription="Som praktikant for NorthSide og Tinderbox bliver du en del af et dynamisk og engageret team af medarbejdere, der arbejder med alle aspekter af festivaludvikling og –ledelse.  Du vil få masser af ansvar og mulighed for indflydelse på festivaludvikling. Da vi har et højt arbejdstempo og mange løbende projekter, er det en nødvendighed, at du er initiativrig og i stand til at varetage opgaver selvstændigt.  Vi søger to kommunikationsprofiler med enten kommunikative, journalistiske, grafiske eller Social Media kompetencer, der desuden kan varetage følgende opgaver:  · Administration på sociale medier som Twitter, Facebook, Instagram, Snapchat etc.  · Webredaktion – Forfatning af nyheder til web og oversættelse til engelsk samt opdatering af websites.  · Planlægning af og udførelse af praktisk arbejde i forbindelse med mindre events.  · Konstruktiv dialog med festivalernes brugere både på mail og sociale medier.">
-				<View layout="horizontal" class="newsContainer" >
-				<ImageView class="newsImage" image="/images/new8.jpg" />
-				<Label class="newsTitle" >Konferenciererne Uffe Holm og Brian Lykke elsker Tinderbox</Label>
-				</View>
-			</TableViewRow>
-			<TableViewRow rowId="9" rowIheading="Lastbiltur i går, Tinderbox i dag" rowImg="/images/new9.jpg" rowDescription="Som praktikant for NorthSide og Tinderbox bliver du en del af et dynamisk og engageret team af medarbejdere, der arbejder med alle aspekter af festivaludvikling og –ledelse.  Du vil få masser af ansvar og mulighed for indflydelse på festivaludvikling. Da vi har et højt arbejdstempo og mange løbende projekter, er det en nødvendighed, at du er initiativrig og i stand til at varetage opgaver selvstændigt.  Vi søger to kommunikationsprofiler med enten kommunikative, journalistiske, grafiske eller Social Media kompetencer, der desuden kan varetage følgende opgaver:  · Administration på sociale medier som Twitter, Facebook, Instagram, Snapchat etc.  · Webredaktion – Forfatning af nyheder til web og oversættelse til engelsk samt opdatering af websites.  · Planlægning af og udførelse af praktisk arbejde i forbindelse med mindre events.  · Konstruktiv dialog med festivalernes brugere både på mail og sociale medier.">
-				<View layout="horizontal" class="newsContainer" >
-				<ImageView class="newsImage" image="/images/new9.jpg" />
-				<Label class="newsTitle" >Lastbiltur i går, Tinderbox i dag</Label>
-				</View>
-			</TableViewRow>
-			<TableViewRow rowId="10" rowIheading="VOXPOP: Det bedste af det bedste" rowImg="/images/new10.jpg" rowDescription="Som praktikant for NorthSide og Tinderbox bliver du en del af et dynamisk og engageret team af medarbejdere, der arbejder med alle aspekter af festivaludvikling og –ledelse.  Du vil få masser af ansvar og mulighed for indflydelse på festivaludvikling. Da vi har et højt arbejdstempo og mange løbende projekter, er det en nødvendighed, at du er initiativrig og i stand til at varetage opgaver selvstændigt.  Vi søger to kommunikationsprofiler med enten kommunikative, journalistiske, grafiske eller Social Media kompetencer, der desuden kan varetage følgende opgaver:  · Administration på sociale medier som Twitter, Facebook, Instagram, Snapchat etc.  · Webredaktion – Forfatning af nyheder til web og oversættelse til engelsk samt opdatering af websites.  · Planlægning af og udførelse af praktisk arbejde i forbindelse med mindre events.  · Konstruktiv dialog med festivalernes brugere både på mail og sociale medier.">
-				<View layout="horizontal" class="newsContainer" >
-				<ImageView class="newsImage" image="/images/new10.jpg" />
-				<Label class="newsTitle" >VOXPOP: Det bedste af det bedste</Label>
+				<Label class="newsTitle" text="{tit}"></Label>
 				</View>
 			</TableViewRow>
 		</TableView>
-		
-		
 	</View>
 </Alloy>

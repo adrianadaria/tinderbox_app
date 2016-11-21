@@ -1,6 +1,6 @@
 <Alloy>
 	<Window id="logWin" exitOnClose="true">
-		<ActionBar id="actionbar" title=" "/>
+		<ActionBar title=" " backgroundImage="images/logo.png"/>
 			<View id="logView">
 			
 			<Label id="loginLabel">Login or Sign Up</Label>

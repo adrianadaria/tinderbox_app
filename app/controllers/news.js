@@ -1,4 +1,21 @@
+var collection = Alloy.Collections.news;
 
+collection.fetch({
+	success: function() {
+		_.each(collection.models, function(element, index, list){
+			
+			element.attributes.id = element.nid;	
+			element.attributes.aut = element.attributes.author;
+			element.attributes.tit = element.attributes.title;
+			element.attributes.des = element.attributes.description;
+			element.attributes.pic = element.attributes.picture;
+			
+		});
+	},
+	error : function() {
+		Ti.API.error("this is not good");
+	}
+});
 
 $.newsTable.addEventListener('click', selectRow);
 
