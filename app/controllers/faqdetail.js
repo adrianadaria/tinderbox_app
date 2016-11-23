@@ -4,7 +4,7 @@ var rowAnswer = $.args.rowAnswer;
 
 //$.car.set(args.rowDescription);
 
-console.log(rowQuestion);
+//console.log(rowQuestion);
 
 var question = Ti.UI.createLabel({
 	text: rowQuestion,
@@ -14,7 +14,7 @@ var question = Ti.UI.createLabel({
 	width: "80%",
 	left: "10%",
 	right: "10%",
-	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 	height: 35,
 	 font: {
 		fontSize: 12,
@@ -31,7 +31,7 @@ var answer = Ti.UI.createLabel({
 	right: "10%",
 	top: 10,
 	bottom: 10,
-	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 	  font: {
 			fontSize: 14,
 			fontFamily: 'brown-regular',
