@@ -1,7 +1,6 @@
 <Alloy>
 	<Window id="faqWindow" backgroundColor="#fcf8f4" layout="vertical">
 		<ActionBar id="actionbar" title=" "/>
-		
 		<ScrollView id="scrollView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="80%">
 		<View layout="vertical" id="faqView" />
 		</ScrollView>
