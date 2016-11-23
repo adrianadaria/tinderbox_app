@@ -1,20 +1,42 @@
+var args = $.args;
 
-$.faqTable.addEventListener('click', selectRow);
+var collection = Alloy.Collections.faq;
+collection.fetch();
 
-function selectRow(e) {
- var rowQuestion = e.rowData.rowQuestion;
- var rowAnswer = e.rowData.rowAnswer;
- //alert(rowDescription);
- 	var detailController = Alloy.createController("faqdetail", {
-		rowQuestion : rowQuestion,
-		rowAnswer : rowAnswer
+function transform(model) {
+
+	var PcObject = model.toJSON();
+	//console.log(PcObject);
+	
+	var label = Ti.UI.createLabel({
+  	text: PcObject.question,
+  	id : PcObject.answer,
+  	className: 'question',
+	top: 10,
+	backgroundColor: '#8ac6b8',
+	color: 'black',
+	width: "80%",
+	left: "10%",
+	right: "10%",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	height: 35,
+	font: {
+		fontSize: 12
+	}
 	});
+	
+	$.FAQcontainer.add(label);
+
+	label.addEventListener('click',function(e){
+       console.log(e.source.id);
+       var detailController = Alloy.createController("faqdetail", {
+		rowQuestion : e.source.text,
+		rowAnswer : e.source.id,
+	});
+	
 	openAsModal(detailController.getView());
+    });
 }
-
-//
-
-
 
 function openAsModal(_view) {
 	if (OS_IOS) {
