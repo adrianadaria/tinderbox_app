@@ -1,4 +1,7 @@
 Alloy.Collections.instance("news");
+Alloy.Collections.instance("faq");
+Alloy.Collections.instance("group");
+Alloy.Collections.instance("tasks");
 
 var logWin = $.logWin;
 var logView = $.logView;
