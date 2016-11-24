@@ -1,5 +1,53 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
+var collection = Alloy.Collections.messages;
+
+collection.fetch({
+	success: function() {
+		_.each(collection.models, function(element, index, list){
+			
+			element.attributes.sid = element.sid;	
+			element.attributes.topic = element.attributes.topic;
+			element.attributes.content = element.attributes.content;
+			
+			
+		});
+	},
+	error : function() {
+		Ti.API.error("this is not good");
+	}
+});
+
+$.newsTable.addEventListener('click', selectRow);
+
+function selectRow(e) {
+ var rowId = e.rowData.rowId;
+ var rowIheading = e.rowData.rowIheading;
+ var rowDescription = e.rowData.rowDescription;
+ //alert(rowDescription);
+ 	var detailController = Alloy.createController("detail", {
+		rowIheading : rowIheading,
+		rowDescription : rowDescription
+	});
+	openAsModal(detailController.getView());
+}
+
+function openAsModal(_view) {
+	if (OS_IOS) {
+		var navWindow = Titanium.UI.iOS.createNavigationWindow({
+			window : _view
+		});
+
+		_view.navWindow = navWindow;
+		navWindow.open({
+			modal : true
+		});
+	} else {
+		_view.open({
+			modal : true
+		});
+	}
+}
 
 /**
  * Callback for Android OptionsMenu
