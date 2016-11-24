@@ -6,8 +6,9 @@
         </View>
       </HeaderView>
       <Require src="menurow" title="Home" icon="home" controller="main"/>
-      <Require src="menurow" title="Ticket" icon="search" controller="ticket"/>
-      <Require src="menurow" title="FAQ" icon="thumb_up" controller="faq"/>
-      <Require src="menurow" title="About" icon="info_outline" controller="about"/>
+      <Require src="menurow" title="Ticket" icon="card_membership" controller="ticket"/>
+      <Require src="menurow" title="System Messages" icon="access_alarm" controller="messages"/>
+      <Require src="menurow" title="FAQ" icon="info_outline" controller="faq"/>
+      <Require src="menurow" title="About" icon="wc" controller="about"/>
     </TableView>
 </Alloy>
