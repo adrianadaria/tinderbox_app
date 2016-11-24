@@ -2,7 +2,7 @@
     <TableView backgroundColor="#FAFAFA" onClick="onSelect">
       <HeaderView>
         <View height="auto" width="100%" backgroundColor="black">
-        	<ImageView image="images/avatar.jpg" width="80%" height="auto" borderRadius="75"></ImageView>
+        	<ImageView image="/images/avatar.jpg" width="80%" height="auto" borderRadius="75"></ImageView>
         </View>
       </HeaderView>
       <Require src="menurow" title="Home" icon="home" controller="main"/>
