@@ -1,0 +1,16 @@
+<Alloy>
+	 <ScrollView id="scrollView" scrollType="vertical" showVerticalScrollIndicator="true" height="100%" width="100%">
+	<View id="view" height="Ti.UI.SIZE" width="100%" layout="vertical">
+		
+		<Label class="titleLabel">Create your account</Label>
+		
+		<TextField class="name" id="fullname" hintText="Your name"></TextField>
+		<TextField class="numberfield" id="phone" hintText="Your phone number"></TextField>
+		<TextField class="emailfield" id="email" hintText="Email used for Facebook"></TextField>
+		<TextField class="name" id="password" hintText="Password" passwordMask="true"></TextField>
+		<TextField class="name" id="password" hintText="Repeat password" passwordMask="true"></TextField>
+	 
+		<Button id="register" onClick="createUser">Sign up</Button>
+	</View>
+	</ScrollView>
+</Alloy>

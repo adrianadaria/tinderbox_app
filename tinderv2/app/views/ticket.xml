@@ -1,0 +1,10 @@
+<Alloy>
+	
+	<View id="container" layout="vertical" height="100%" top="30dp">
+		
+	<Label color="black" top="30dp">Scan to see your ticket</Label>	
+	
+	<ImageView id="qrCode" image="/images/qrCode.PNG" width="70%" top="40dp"></ImageView>
+	
+	</View>
+</Alloy>

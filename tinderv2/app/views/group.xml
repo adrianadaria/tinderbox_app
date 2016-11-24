@@ -1,0 +1,5 @@
+<Alloy>
+	<ScrollView src="group" id="scv" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="100%" width="100%">	
+	<View id="container" layout="vertical" dataCollection="group" dataTransform="transform" dataFilter="filter"></View>
+	</ScrollView>
+</Alloy>

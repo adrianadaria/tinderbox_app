@@ -1,0 +1,6 @@
+	<Alloy>
+	<ScrollView id="TASKscv" backgroundColor="#FDF9F4" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="100%" width="100%">	
+	<View id="TASKcontainer" height="Ti.UI.SIZE" width="100%" layout="vertical" dataCollection="tasks" dataTransform="transform" dataFilter="filter"></View>
+	 <Label class="titleLabel">Your schedule</Label>
+	</ScrollView>
+	</Alloy>

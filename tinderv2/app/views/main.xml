@@ -1,0 +1,26 @@
+<Alloy>
+	<View layout="vertical" width="100%" height="100%">
+	<ScrollableView id="menuBar" width="100%" height="90%" showPagingControl="true" scrollingEnabled="true">
+		<View id="v1">
+			<Require src="news"></Require>
+		</View>
+		<View id="v2">
+			<Require src="schedule"></Require>
+		</View>
+		<View id="v3">
+			<Require src="group"></Require>
+		</View>	
+	</ScrollableView>
+	<View height="10%" width="100%" layout="horizontal">
+		<View class="menuItem1" id="pView1" width="33.3%" height="Titanium.UI.FILL">
+			<Label>News</Label>
+		</View>
+		<View class="menuItem1" id="pView2" width="33.3%" height="Titanium.UI.FILL">
+			<Label>Schedule</Label>
+		</View>
+		<View class="menuItem1" id="pView3" width="33.3%" height="Titanium.UI.FILL">
+			<Label>Team</Label>
+		</View>
+	</View>
+	</View>
+</Alloy>
