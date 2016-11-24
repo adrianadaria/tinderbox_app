@@ -1,5 +1,12 @@
 <Alloy>
 	<View class="container">
-		<Label color="red">yo</Label>
+			<TableView height="100%" id="messagesTable" dataCollection="messages">
+			<TableViewRow rowId="{sid}" rowIheading="{topic}" rowDescription="{content}">
+				<View layout="horizontal" class="messagesContainer" >
+				<Label class="messagesTitle" text="{topic}"></Label>
+                <Label class="messagesContent" text="{content}"></Label>
+				</View>
+			</TableViewRow>
+		</TableView>
 	</View>
 </Alloy>
