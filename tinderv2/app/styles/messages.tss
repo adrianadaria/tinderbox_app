@@ -1,4 +1,33 @@
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000",
+	font: {
+		fontSize: 20,
+		fontFamily: 'Helvetica Neue'
+	},
+	textAlign: 'center'
+} 
 
-".container" : {
-  
-}
+
+".messagesTitle": {
+	backgroundColor: 'white',
+	color: 'black',
+	width: "70%",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	height: 35,
+	font: {
+		fontSize: 12
+	}
+} 
+
+".messagesContainer": {
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_LINE,
+	borderWidth: 2,
+	borderColor: '#043540',
+	width: "80%",
+	left: "10%",
+	right: "10%",
+	backgroundColor: 'white',
+	top: 5
+} 
