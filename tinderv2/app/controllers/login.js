@@ -11,34 +11,35 @@ var regView = Alloy.createController('register').getView();
 
 boolean: k = false;
 ////
+
 function login(e) {
 	
-	var username = $.username;
-	var password = $.password;
-	var sendData = JSON.stringify({
+	var username = $.username.value;
+	var password = $.password.value;
+	var sendData = {
 		
-		"userName": username,
-		"userPass": password
+		"uname": username,
+		"upass": password
 		
-	});
+	};
 	var url = "http://kostylo.dk/projects/api/login";
 	var xhr = Ti.Network.createHTTPClient();
 	xhr.onload = function(){
 		
-		var resp = JSON.stringify(this.responseData);
-		console.log(resp);
-		if(resp){
+				
 			Alloy.createController('home').getView().open();
 			
-		}
-		else{
-			alert("try again");
-		}
+			
+		
 	};
-	xhr.open("POST",url);
+	xhr.onerror = function (){
+		
+		alert("Try again");
+		
+	};
+	xhr.open('POST',url);
 	xhr.send(sendData);
 }
-
 
 function register(e) {
     logView.setVisible(false);
