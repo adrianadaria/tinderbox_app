@@ -12,6 +12,8 @@ function filter(collection) {
 
 
 function transform(model) {
+	
+	var fontsize = (Titanium.Platform.displayCaps.platformHeight*2)/100;
 	//convert the model to a JSON object
 	var PcObject = model.toJSON();
 	//console.log(PcObject);
@@ -21,7 +23,7 @@ function transform(model) {
 
 
 var holder = Ti.UI.createView({
-	top: '0dp',
+	top: '10dp',
 	width:'70%',
 	height:'35dp',
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
@@ -45,7 +47,7 @@ var label = Ti.UI.createLabel({
 	color: "black",
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
 	font: {
-		fontSize:"20dp",
+		fontSize: fontsize
 	}
 });
 
@@ -57,10 +59,27 @@ var phoneimage = Ti.UI.createImageView({
 	right:'0dp'
 });
 
+var fbimage = Ti.UI.createImageView({
+	id: PcObject.email,
+	className: 'facebook',
+	image:'/images/fb.png',
+	height:'100%',
+	left:'0dp'
+});
+
+var Headlabel = Ti.UI.createLabel({
+  	text: "Your Group",
+	color: "black",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontSize: fontsize
+	}
+});
 
 
+$.container.add(Headlabel);
 $.container.add(holder);
-holder.add(mailimage);
+holder.add(fbimage);
 holder.add(label);
 holder.add(phoneimage);
 
