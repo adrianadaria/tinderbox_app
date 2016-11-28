@@ -4,6 +4,8 @@ var collection = Alloy.Collections.faq;
 collection.fetch();
 
 function transform(model) {
+	
+	var fontsize = (Titanium.Platform.displayCaps.platformHeight*2)/100;
 
 	var PcObject = model.toJSON();
 	//console.log(PcObject);
@@ -21,7 +23,7 @@ function transform(model) {
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 	height: 35,
 	font: {
-		fontSize: 12
+		fontSize: fontsize
 	}
 	});
 	
@@ -54,39 +56,3 @@ function openAsModal(_view) {
 		});
 	}
 }
-
-/**
- * Callback for Android OptionsMenu
- */
-function onCreateOptionsMenu(e) {
-  
-  // additional overflow menu item
-  e.menu.add({
-    title : "Main option",
-    showAsAction : Ti.Android.SHOW_AS_ACTION_NEVER
-  });
-
-}
-
-/**
- * Cleans up the controller
- * 
- * http://www.tidev.io/2014/09/18/cleaning-up-alloy-controllers/
- */
-function cleanup() {
-  $.off();
-}
-
-/**
- * Initializes the controller
- */
-function init() {
-  
-  $.on('createOptionsMenu', onCreateOptionsMenu);
-
-}
-
-// PUBLIC
-exports.id = 'faq';
-exports.cleanup = cleanup;
-exports.init = init;
