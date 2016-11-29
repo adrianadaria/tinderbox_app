@@ -3,7 +3,7 @@ var rowQuestion = $.args.rowQuestion;
 var rowAnswer = $.args.rowAnswer;
 
 //$.car.set(args.rowDescription);
-
+var fontsize = (Titanium.Platform.displayCaps.platformHeight*2)/100;
 //console.log(rowQuestion);
 
 var question = Ti.UI.createLabel({
@@ -17,7 +17,7 @@ var question = Ti.UI.createLabel({
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 	height: 35,
 	 font: {
-		fontSize: 12,
+		fontSize: fontsize,
 		fontFamily: 'eveleth-thin',
 	}
 
@@ -33,7 +33,7 @@ var answer = Ti.UI.createLabel({
 	bottom: 10,
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 	  font: {
-			fontSize: 14,
+			fontSize: fontsize,
 			fontFamily: 'brown-regular',
 	}
 });
@@ -45,7 +45,11 @@ var button = Titanium.UI.createButton({
 	borderRadius: '10dp',
 	backgroundColor: "#FEDC70",
 	color: "#F18A78",
-	width: '40%'
+	width: '40%',
+	font: {
+		fontSize: fontsize,
+		fontFamily: 'brown-regular',
+	}
 });
 
 var leview = Titanium.UI.createView({
@@ -69,13 +73,4 @@ button.addEventListener("click", function(){
 
 $.faqWindow.addEventListener("close",function(){
 	$.destroy();
-});
-
-$.faqWindow.addEventListener('open',function(evt){
-	if (OS_ANDROID){
-		var activity=evt.source.getActivity();
-		var actionbar=activity.actionBar;
-		actionbar.hide();
-		
-	}
 });
