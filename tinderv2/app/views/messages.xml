@@ -1,12 +1,6 @@
 <Alloy>
-	<View class="container">
-			<TableView height="100%" id="messagesTable" dataCollection="messages">
-			<TableViewRow rowId="{sid}" rowIheading="{topic}" rowDescription="{content}">
-				<View layout="horizontal" class="messagesContainer" >
-				<Label class="messagesTitle" text="{topic}"></Label>
-                <Label class="messagesContent" text="{content}"></Label>
-				</View>
-			</TableViewRow>
-		</TableView>
+	<View class="container" layout="vertical" height="100%" id="MessageCon" dataCollection="messages" dataTransform="transform">
+			
+			
 	</View>
 </Alloy>
