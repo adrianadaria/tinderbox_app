@@ -18,7 +18,7 @@ collection.fetch({
 	}
 });
 
-$.newsTable.addEventListener('click', selectRow);
+
 
 function selectRow(e) {
  var rowId = e.rowData.rowId;
