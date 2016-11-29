@@ -1,13 +1,18 @@
-// Arguments passed into this controller can be accessed via the `$.args` object directly ors:
-var rowQuestion = $.args.rowQuestion;
-var rowAnswer = $.args.rowAnswer;
+var args = $.args;
 
-//$.car.set(args.rowDescription);
-var fontsize = (Titanium.Platform.displayCaps.platformHeight*2)/100;
-//console.log(rowQuestion);
+var collection = Alloy.Collections.faq;
+collection.fetch();
 
-var question = Ti.UI.createLabel({
-	text: rowQuestion,
+function transform(model) {
+
+	var PcObject = model.toJSON();
+	//console.log(PcObject);
+	var fontsize = (Titanium.Platform.displayCaps.platformHeight*2)/100;
+	
+	var label = Ti.UI.createLabel({
+  	text: PcObject.question,
+  	id : PcObject.answer,
+  	className: 'question',
 	top: 10,
 	backgroundColor: '#8ac6b8',
 	color: 'black',
@@ -16,61 +21,73 @@ var question = Ti.UI.createLabel({
 	right: "10%",
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 	height: 35,
-	 font: {
-		fontSize: fontsize,
-		fontFamily: 'eveleth-thin',
-	}
-
-});
-
-var answer = Ti.UI.createLabel({
-	text: rowAnswer,
-	color: '#043540',
-	width: "80%",
-	left: "10%",
-	right: "10%",
-	top: 10,
-	bottom: 10,
-	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-	  font: {
-			fontSize: fontsize,
-			fontFamily: 'brown-regular',
-	}
-});
-
-var button = Titanium.UI.createButton({
-   title: 'Back',
-   top: 10,
-	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-	borderRadius: '10dp',
-	backgroundColor: "#FEDC70",
-	color: "#F18A78",
-	width: '40%',
 	font: {
-		fontSize: fontsize,
-		fontFamily: 'brown-regular',
+		fontSize: fontsize
 	}
-});
+	});
+	
+	$.FAQcontainer.add(label);
 
-var leview = Titanium.UI.createView({
-		backgroundColor: 'white',
-	borderWidth: 1,
-	borderColor: '#043540',
-   	width: "80%",
-	left: "10%",
-	right: "10%",
-	height: Ti.UI.SIZE
-});
+	label.addEventListener('click',function(e){
+       console.log(e.source.id);
+       var detailController = Alloy.createController("faqdetail", {
+		rowQuestion : e.source.text,
+		rowAnswer : e.source.id,
+	});
+	
+	openAsModal(detailController.getView());
+    });
+}
 
-$.faqView.add(question);
-$.faqView.add(leview);
-leview.add(answer);
-$.faqView.add(button);
+function openAsModal(_view) {
+	if (OS_IOS) {
+		var navWindow = Titanium.UI.iOS.createNavigationWindow({
+			window : _view
+		});
 
-button.addEventListener("click", function(){
-	$.getView().navWindow ? $.getView().navWindow.close() : $.getView().close();
-});
+		_view.navWindow = navWindow;
+		navWindow.open({
+			modal : true
+		});
+	} else {
+		_view.open({
+			modal : true
+		});
+	}
+}
 
-$.faqWindow.addEventListener("close",function(){
-	$.destroy();
-});
+/**
+ * Callback for Android OptionsMenu
+ */
+function onCreateOptionsMenu(e) {
+  
+  // additional overflow menu item
+  e.menu.add({
+    title : "Main option",
+    showAsAction : Ti.Android.SHOW_AS_ACTION_NEVER
+  });
+
+}
+
+/**
+ * Cleans up the controller
+ * 
+ * http://www.tidev.io/2014/09/18/cleaning-up-alloy-controllers/
+ */
+function cleanup() {
+  $.off();
+}
+
+/**
+ * Initializes the controller
+ */
+function init() {
+  
+  $.on('createOptionsMenu', onCreateOptionsMenu);
+
+}
+
+// PUBLIC
+exports.id = 'faq';
+exports.cleanup = cleanup;
+exports.init = init;

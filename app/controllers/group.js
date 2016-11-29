@@ -1,5 +1,6 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
+console.log(Alloy.Globals.transferId);
 
 var collection = Alloy.Collections.group;
 collection.fetch();

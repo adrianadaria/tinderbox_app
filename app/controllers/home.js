@@ -1,74 +1,131 @@
+// Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
 
-now();
+function toggleMenu() {
+	Alloy.Globals.drawer.toggleLeftWindow();
+}
 
-function now(){
-	
-	// Keep a global reference of the available pages
-	var numberOfPages = $.messagesMenu.getViews().length;
-	var numberOfPages2 = $.messageMenu2.getViews().length;
-	
-	var pages = []; // without this, the current page won't work on future references of the module
-	var pages2 = [];
-		// Store a reference to this view
-	pages.push($.pView1, $.pView2, $.pView3);
-	pages2.push($.p2View1, $.p2View2, $.p2View3, $.p2View4);
-	
-	// Mark the initial selected page
-	pages[$.messagesMenu.getCurrentPage()].setOpacity(1);
-	pages[$.messageMenu2.getCurrentPage()].setOpacity(1);
-	
-	// Callbacks
-	onScroll = function(event){
-		// Go through each and reset it's opacity
-		for (var i = 0; i < numberOfPages; i++) {
-			pages[i].setOpacity(0.5);
-		}
-	var m1 = $.messagesMenu.currentPage;
-		pages[m1].setOpacity(1);
-		
-	};
-	
-	onScroll2 = function(event){
-		// Go through each and reset it's opacity
-		for (var i = 0; i < numberOfPages2; i++) {
-			pages2[i].setOpacity(0.5);
-		}
-		var m2 = $.messageMenu2.currentPage;
-		pages2[m2].setOpacity(1);
-		
-	};
-	
-	onPostLayout = function(event) {
-	// Go through each and reset it's opacity
-	for(var i = 0; i < numberOfPages; i++) {
-		pages[i].setOpacity(0.5);
-	}
-	// Bump the opacity of the new current page
-	pages[$.messagesMenu.currentPage].setOpacity(1);
-	
-};
+/**
+ * #Home Controller
+ * 
+ * Here is where we setup the drawer layout and create a global reference.
+ * Since the activity behind the index window will be the only access point
+ * for the ActionBar and the optionsMenu, we also setup a forwarding
+ * mechanism for nested controllers (content views).
+ * 
+ * We want to use the drawer for our top-level-navigation. So, each content
+ * view is represented as an element in the menu, which will act as the
+ * leftView of the drawer.
+ * 
+ * Initialization works as follows:
+ *  1. init drawer
+ *  2. open index window
+ *  3. setup actionbar, optionsMenu
+ *  4. init content view
+ * 
+ * Every content view is a separate controller which can have its own
+ * ActionBar setup and optionsMenu.
+ */
 
-	onPostLayout2 = function(event) {
-	// Go through each and reset it's opacity
-	for(var i = 0; i < numberOfPages2; i++) {
-		pages2[i].setOpacity(0.5);
-	}
-	// Bump the opacity of the new current page
-	pages2[$.messageMenu2.currentPage].setOpacity(1);
-	
-};
-	
-	// Attach the scroll event to this scrollableView, so we know when to update things
-	$.messagesMenu.addEventListener("scroll", onScroll);
-	$.messagesMenu.addEventListener("postlayout", onPostLayout);
-	$.messageMenu2.addEventListener("scroll", onScroll2);
-	$.messageMenu2.addEventListener("postlayout", onPostLayout2);
-};
+initDrawer();
 
+/**
+ * initializes drawer navigation
+ */
+function initDrawer() {
+  // Android only
+  if (OS_ANDROID) {
+    
+    // Load module
+    var TiDrawerLayout = require('com.tripvi.drawerlayout');
+    
+    // define menu and main content view
+    Alloy.Globals.menu = Alloy.createController('menu', {
+      parent : $.homeWin
+    });
+    
+    var filter = Alloy.createController('filter'); 
+    
+    // this is just a wrapper
+    // actual content views are add to this later
+    Alloy.Globals.contentView = Ti.UI.createView({
+      width : Ti.UI.FILL,
+      height : Ti.UI.FILL
+    });
 
+    Alloy.Globals.drawer = TiDrawerLayout.createDrawer({
+      leftView: Alloy.Globals.menu.getView(),
+      //rightView: filter.getView(),
+      centerView: Alloy.Globals.contentView,
+      leftDrawerWidth: "260",
+      rightDrawerWidth: "240"
+    });
 
+    Alloy.Globals.drawer.addEventListener('drawerclose', onDrawerChange);
+    $.homeWin.add(Alloy.Globals.drawer);
+    
+  }
+  
+  //$.index.open();
+}
 
+/**
+ * Android callback for {Ti.UI.Window} open event
+ */
+function onOpen() {
+  
+  var activity = $.homeWin.getActivity();
 
+  if (activity) {
 
+    var actionBar = activity.getActionBar();
+    actionBar.hide();
 
+    activity.onCreateOptionsMenu = function(e) {
+      e.menu.clear();
+
+      e.activity = activity;
+      e.actionBar = actionBar;
+
+      // distinguishing the drawer state is not necessary anymore
+      // since the drawer covers the toolbar
+      Alloy.Globals.optionsMenu(e);//
+      
+    };
+
+    if (actionBar) {
+      actionBar.displayHomeAsUp = true;
+      actionBar.title = "TinderBox";
+      actionBar.onHomeIconItemSelected = function() {
+        Alloy.Globals.drawer.toggleLeftWindow();
+      };
+    }
+  };
+  
+  init();
+
+  return true;
+}
+
+/**
+ * callback for Android back button
+ */
+function onBack(){
+  Alloy.Globals.back();
+}
+
+/**
+ * callback for drawer open / close event
+ * @param {Object} event
+ */
+function onDrawerChange(e) {
+  $.homeWin.getActivity().invalidateOptionsMenu();
+}
+
+/**
+ * initializes the Controller
+ */
+function init() {
+  Alloy.Globals.menu.select(0);
+  OS_ANDROID && $.homeWin.getActivity().invalidateOptionsMenu();
+}

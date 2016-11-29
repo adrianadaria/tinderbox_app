@@ -1,48 +1,96 @@
-// The contents of this file will be executed before any of
-// your view controllers are ever executed, including the index.
-// You have access to all functionality on the `Alloy` namespace.
-//
-// This is a great place to do any initialization for your app
-// or create any global variables/functions that you'd like to
-// make available throughout your app. You can easily make things
-// accessible globally by attaching them to the `Alloy.Globals`
-// object. For example:
-//
-// Alloy.Globals.someGlobalFunction = function(){};
-
-
-// added during app creation. this will automatically login to
-// ACS for your application and then fire an event (see below)
-// when connected or errored. if you do not use ACS in your
-// application as a client, you should remove this block
-/*(function(){
-var ACS = require('ti.cloud'),
-    env = Ti.App.deployType.toLowerCase() === 'production' ? 'production' : 'development',
-    username = Ti.App.Properties.getString('acs-username-'+env),
-    password = Ti.App.Properties.getString('acs-password-'+env);
-
-// if not configured, just return
-if (!env || !username || !password) { return; }
-/**
- * Appcelerator Cloud (ACS) Admin User Login Logic
- *
- * fires login.success with the user as argument on success
- * fires login.failed with the result as argument on error
- */
-/*ACS.Users.login({
-	login:username,
-	password:password,
-}, function(result){
-	if (env==='development') {
-		Ti.API.info('ACS Login Results for environment `'+env+'`:');
-		Ti.API.info(result);
+(function(){
+  Alloy.Globals.transferId = undefined;
+  Alloy.Globals.groupId = undefined;
+  /**
+   * @property {Object} drawer reference
+   */
+  Alloy.Globals.drawer = undefined;
+  
+  /**
+   * @type {Alloy.Controller} menu  global menu reference
+   */
+  Alloy.Globals.menu = undefined;
+  
+  /**
+   * @property {Ti.UI.View} contentView 
+   */
+  Alloy.Globals.contentView = undefined;
+  
+  /**
+   * @property {Alloy.Controller} currentCtrl   references current Controller
+   * @private
+   */
+  var currentCtrl;
+  
+  /**
+   * @property {Array} backstack   Top-level view history
+   * @private
+   */
+  var backstack = [];
+  
+  /**
+   * optionsmenu dispatcher
+   */
+  Alloy.Globals.optionsMenu = function(e) {
+    if (_.isUndefined(currentCtrl)){
+      return;
+    }
+    
+    if (OS_ANDROID){
+      // sometimes we don't have a direct reference that we can pass through
+      // but need to update the menu anyway
+      if (!!e){
+        e.menu.clear();
+        currentCtrl.trigger('createOptionsMenu', e);
+      }else{
+        !!Alloy.Globals.menu && Alloy.Globals.menu.invalidateOptionsMenu();
+      }
+    }
+    
+    if (OS_IOS){
+      currentCtrl.trigger('createOptionsMenu', e);
+    }
+  };
+  
+  /**
+   * opens a new controller in drawer.contentView
+   * and closes the old controller
+   * @param {Alloy.Controller} Controller
+   * @param {Boolean} wether this controller should be added to the backstack (defaults to true)
+   */
+  Alloy.Globals.open = function(_ctrl, _backstack) {
+  
+    if (currentCtrl) {
+      Alloy.Globals.contentView.remove(currentCtrl.getView());
+      _.isFunction(currentCtrl.cleanup) && currentCtrl.cleanup();
+    }
+  
+    currentCtrl = _ctrl;
+    Alloy.Globals.contentView.add(currentCtrl.getView());
+    currentCtrl.init();
+    
+    if (_backstack && _.has(currentCtrl, 'id')){
+	  !_.contains(backstack, currentCtrl.id) && backstack.push(currentCtrl.id);
 	}
-	if (result && result.success && result.users && result.users.length){
-		Ti.App.fireEvent('login.success',result.users[0],env);
-	} else {
-		Ti.App.fireEvent('login.failed',result,env);
-	}
-});
-
-})();*/
-
+  };
+  
+  /**
+   * closes current controller and re-opens the previous one
+   * if backstack isn't empty
+   */
+  Alloy.Globals.back = function(){
+    
+    backstack.pop();
+    
+    if (!_.isEmpty(backstack)){
+      var previousCtrlId = _.last(backstack);
+      Alloy.Globals.menu.select(previousCtrlId, function(){
+        Alloy.Globals.optionsMenu();
+      }, false);
+    }else{
+      Ti.Android.currentActivity.finish();
+    }
+    
+  };
+  
+})();

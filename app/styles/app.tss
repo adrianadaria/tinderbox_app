@@ -24,12 +24,3 @@ overrode the settings with other TSS, XML, or JS settings:
 }
 
 */
-
-
-"ActionBar": {
-    //backgroundImage: "images/logo.png"
-    //color:"#043540",
-    //backgroundSize:"cover"
-    
-}
-

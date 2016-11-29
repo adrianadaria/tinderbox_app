@@ -6,12 +6,6 @@
    backgroundColor: "#FDF9F4"
 }
 
-// TINDERBOX logo 
-
-".logo" : {
-	width:'100%'
-}
-
 // Text stylying, for example for "Create your account"
 
 "Label": {
@@ -29,14 +23,14 @@
 	},
 }
 
-".normalTitle":{
-	color: "#001133",
-	top: '10dp',
-	font: {
-		fontSize: 16,
-		fontFamily: 'brown-regular',
-	},
-}
+//".normalTitle":{
+//	color: "#001133",
+//	top: '10dp',
+//	font: {
+//		fontSize: 16,
+//		fontFamily: 'brown-regular',
+//	},
+//}
 
 
 "TextField": {
@@ -90,14 +84,14 @@
 
 // This is the switch for languages
 
-"#basicSwitch": {
-  style: Ti.UI.Android.SWITCH_STYLE_CHECKBOX,
-  titleOn:'Yes',
-  titleOff:'No',
-  value:true,
-  backgroundColor:"#043540",
-  backgroundSelectedColor:"#8BC7B9"
-}
+//"#basicSwitch": {
+//  style: Ti.UI.Android.SWITCH_STYLE_CHECKBOX,
+//  titleOn:'Yes',
+//  titleOff:'No',
+ // value:true,
+//  backgroundColor:"#043540",
+//  backgroundSelectedColor:"#8BC7B9"
+//}
 
 
 // Style of Sign Up button
@@ -114,15 +108,15 @@
 
 // Style of Upload Image button
 
-"#profileImage": {
-	top: '20dp',
-	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-	borderRadius: '10dp',
-	backgroundColor: "white",
-	color: "#CBCAC9",
-	borderColor:"#CBCAC9",
-	width: '70%',
-	height:'35dp'
-}
+//"#profileImage": {
+//	top: '20dp',
+//	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+//	borderRadius: '10dp',
+//	backgroundColor: "white",
+//	color: "#CBCAC9",
+//	borderColor:"#CBCAC9",
+//	width: '70%',
+//	height:'35dp'
+//}
 
 

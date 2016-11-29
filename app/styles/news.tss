@@ -1,7 +1,3 @@
-"Window": {
-	backgroundColor: "#FDF9F4"
-}
-
 "Label": {
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
@@ -38,7 +34,3 @@
 	backgroundColor: 'white',
 	top: 5
 } 
-
-".logo" : {
-	width:'100%'
-}

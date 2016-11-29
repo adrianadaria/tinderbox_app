@@ -1,3 +1,5 @@
+// Arguments passed into this controller can be accessed via the `$.args` object directly or:
+var args = $.args;
 var collection = Alloy.Collections.news;
 
 collection.fetch({
@@ -32,10 +34,6 @@ function selectRow(e) {
 	});
 	openAsModal(detailController.getView());
 }
-
-//
-
-
 
 function openAsModal(_view) {
 	if (OS_IOS) {
