@@ -11,58 +11,62 @@ function filter(collection) {
 
 function transform(model) {
 	
+	var fontsize = (Titanium.Platform.displayCaps.platformHeight*2)/100;
+
+
+	
 	var PcObject = model.toJSON();
 	//console.log(PcObject);
 		
 	var holder = Ti.UI.createView({
 	borderRadius: "10dp",
 	borderColor: "black",
-	width:"70%",
-	top:100,
+	width:"80%",
+	top:10,
 	backgroundColor:"white",
 	layout: "vertical"
 	});
 	
 	var holderSection = Ti.UI.createView({
-	left:"20%",
-	right:"20%",
-	width: "60%",
+	left:"10%",
+	right:"10%",
+	width: "80%",
 	height: Ti.UI.SIZE,
 	top: "50",
 	layout: "horizontal"
 	});
 	
 	var holderSection2 = Ti.UI.createView({
-	left:"20%",
-	right:"20%",
-	width: "60%",
+	left:"10%",
+	right:"10%",
+	width: "80%",
 	height: Ti.UI.SIZE,
 	top: "10",
 	layout: "horizontal"
 	});
 	
 	var holderSection3 = Ti.UI.createView({
-	left:"20%",
-	right:"20%",
-	width: "60%",
+	left:"10%",
+	right:"10%",
+	width: "80%",
 	height: Ti.UI.SIZE,
 	top: "10",
 	layout: "horizontal"
 	});
 	
 	var holderSection4 = Ti.UI.createView({
-	left:"20%",
-	right:"20%",
-	width: "60%",
+	left:"10%",
+	right:"10%",
+	width: "80%",
 	height: Ti.UI.SIZE,
 	top: "10",
 	layout: "horizontal"
 	});
 	
 	var holderSection5 = Ti.UI.createView({
-	left:"15%",
-	right:"15%",
-	width: "70%",
+	left:"10%",
+	right:"10%",
+	width: "80%",
 	top: "30",
 	bottom: "50",
 	height:'35dp',
@@ -77,7 +81,7 @@ function transform(model) {
   	text: "Task:",
   	color: "black",
 	font: {
-		fontSize: 20,
+		fontSize: fontsize,
 		fontFamily: 'brown-regular',
 	}
 	});
@@ -87,7 +91,7 @@ function transform(model) {
   	className: 'task',
   	color: "black",
 	font: {
-		fontSize: 20,
+		fontSize: fontsize,
 		fontFamily: 'eveleth-regular',
 	},
 	left:"10dp"
@@ -97,7 +101,7 @@ function transform(model) {
   	text: "Time:",
   	color: "black",
 	font: {
-		fontSize: 20,
+		fontSize: fontsize,
 		fontFamily: 'brown-regular',
 	}
 	});
@@ -107,7 +111,7 @@ function transform(model) {
   	className: 'time',
   	color: "black",
 	font: {
-		fontSize: 20,
+		fontSize: fontsize,
 		fontFamily: 'eveleth-regular',
 	},
 	left:"10dp"
@@ -117,7 +121,7 @@ function transform(model) {
   	text: "Date:",
   	color: "black",
 	font: {
-		fontSize: 20,
+		fontSize: fontsize,
 		fontFamily: 'brown-regular',
 	}
 	});
@@ -127,7 +131,7 @@ function transform(model) {
   	className: 'time',
   	color: "black",
 	font: {
-		fontSize: 20,
+		fontSize: fontsize,
 		fontFamily: 'eveleth-regular',
 	},
 	left:"10dp"
@@ -137,7 +141,7 @@ function transform(model) {
   	text: "Area:",
   	color: "black",
 	font: {
-		fontSize: 20,
+		fontSize: fontsize,
 		fontFamily: 'brown-regular',
 	}
 	});
@@ -147,7 +151,7 @@ function transform(model) {
   	className: 'time',
   	color: "black",
 	font: {
-		fontSize: 20,
+		fontSize: fontsize,
 		fontFamily: 'eveleth-regular',
 	},
 	left:"10dp"
@@ -175,7 +179,7 @@ var label = Ti.UI.createLabel({
 	color: "black",
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
 	font: {
-		fontSize:"20dp",
+		fontSize: fontsize,
 	}
 });
 
@@ -186,7 +190,17 @@ var phoneimage = Ti.UI.createImageView({
 	height:'100%',
 	right:'0dp'
 });
-	
+
+var Headlabel = Ti.UI.createLabel({
+  	text: "Your schedule",
+	color: "black",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontSize: fontsize,
+	}
+});
+		 
+	$.TASKcontainer.add(Headlabel);
 	$.TASKcontainer.add(holder);
 	holder.add(holderSection);
 	holderSection.add(holderSectionTaskLabel);
