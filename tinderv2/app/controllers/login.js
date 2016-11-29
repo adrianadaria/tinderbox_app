@@ -2,6 +2,7 @@ Alloy.Collections.instance("news");
 Alloy.Collections.instance("tasks");
 Alloy.Collections.instance("group");
 Alloy.Collections.instance("faq");
+Alloy.Collections.instance("messages");
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
 
