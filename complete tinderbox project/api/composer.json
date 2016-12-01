@@ -1,0 +1,17 @@
+{
+    "name": "api/slim",
+    "description": "rest api",
+    "keywords": ["api", "slim"],
+    "license": "MIT",
+    "type": "project",
+
+    "authors": {
+            "name": "Konstantin Arescenko",
+            "email": "kostylo@windowslive.com",
+            "homepage": "https://kostylo.dk"
+    },
+
+    "require": {
+        "slim/slim": "^3.5"
+    }
+}

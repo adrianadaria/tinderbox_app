@@ -1,0 +1,12 @@
+<Alloy>
+	<View class="container">
+		<TableView height="100%" id="newsTable" dataCollection="news">
+			<TableViewRow rowId="{nid}" rowIheading="{tit}" rowImg="/images/new1.jpg" rowDescription="{des}">
+				<View layout="horizontal" class="newsContainer" >
+				<ImageView class="newsImage" image="/images/new1.jpg" />
+				<Label class="newsTitle" text="{tit}"></Label>
+				</View>
+			</TableViewRow>
+		</TableView>
+	</View>
+</Alloy>

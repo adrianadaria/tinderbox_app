@@ -1,0 +1,10 @@
+<Alloy>
+	<View class="container" layout="vertical">
+		<Label color="black" width="70%" top="15%">The goal of this application is to provide volunteers with the possibility to see tasks, write to team members, follow the recent news and many more...</Label>
+		<Label color="black" top="10%">developers:</Label>
+		<Label color="blue" top="10dp">Konstantin</Label>
+		<Label color="blue">Georgi</Label>
+		<Label color="blue">Andrei</Label>
+		<Label color="blue">Adriana</Label>
+	</View>
+</Alloy>

@@ -1,0 +1,9 @@
+<Alloy>
+	<Window id="faqWindow" backgroundColor="#fcf8f4" layout="vertical">
+		<ActionBar id="actionbar" title=" "/>
+		<Require src="topbar"></Require>
+		<ScrollView id="scrollView" showVerticalScrollIndicator="true" scrollType="vertical" height="85%">
+		<View layout="vertical" id="faqView" />
+		</ScrollView>
+	</Window>
+</Alloy>

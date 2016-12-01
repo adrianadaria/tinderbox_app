@@ -1,0 +1,9 @@
+".titleLabel":{
+	color: "black",
+	font: {
+		fontSize: 26,
+		fontFamily: 'eveleth-thin',
+	},
+	textAling:"center",
+	top:"30dp"
+}

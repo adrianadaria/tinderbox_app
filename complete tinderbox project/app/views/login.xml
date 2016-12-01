@@ -1,0 +1,12 @@
+<Alloy>
+	<Window id="logWin" exitOnClose="true" layout="vertical">
+		<Require src="topbar"></Require>
+		<View id="logView">
+			<Label id="loginLabel">Login or Sign Up</Label>
+			<TextField id="username" hintText="Your name"></TextField>
+			<TextField id="password" hintText="Password"></TextField>
+			<Button id="login" onClick="login">Login</Button>
+			<Button id="btnReg" onClick="register">SignUp</Button>
+		</View>
+	</Window>
+</Alloy>

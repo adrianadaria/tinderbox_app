@@ -1,0 +1,6 @@
+<Alloy>
+	<View class="container" layout="vertical" height="100%" id="MessageCon" dataCollection="messages" dataTransform="transform">
+			
+			
+	</View>
+</Alloy>

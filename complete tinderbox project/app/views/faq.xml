@@ -1,0 +1,7 @@
+<Alloy>
+	
+	<ScrollView id="FAQscv" showVerticalScrollIndicator="true" scrollType="vertical" height="100%" width="100%">	
+	<View id="FAQcontainer" layout="vertical" dataCollection="faq" dataTransform="transform" xdataFilter="filter"></View>
+	</ScrollView>
+	
+</Alloy>
